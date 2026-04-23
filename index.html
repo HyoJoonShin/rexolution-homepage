@@ -6,6 +6,73 @@
 <title>Rexolution</title>
 
 <style>
+:root {
+  --main-red:#7A1E14;
+  --bg:#0b0b0b;
+  --card:#111;
+}
+
+body {
+  background:var(--bg);
+  color:white;
+  font-family:Arial;
+}
+
+/* 강조 컬러 */
+.highlight {
+  color:var(--main-red);
+}
+
+/* 버튼 */
+.btn {
+  background:var(--main-red);
+  padding:12px 24px;
+  display:inline-block;
+  margin-top:20px;
+  text-decoration:none;
+  color:white;
+  border-radius:6px;
+  transition:0.3s;
+}
+.btn:hover {
+  box-shadow:0 0 20px var(--main-red);
+}
+
+/* 카드 */
+.card {
+  background:var(--card);
+  padding:30px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.05);
+}
+
+/* 타임라인 */
+.timeline {
+  border-left:2px solid var(--main-red);
+  padding-left:20px;
+}
+
+/* NEW: Founder */
+.founder-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.founder {
+  text-align:center;
+}
+
+.founder img {
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  margin-bottom:15px;
+  border:2px solid var(--main-red);
+}
+</style>
+  
+<style>
 * { margin:0; padding:0; box-sizing:border-box; }
 
 body {
@@ -138,6 +205,28 @@ footer {
     레졸루션은 제조업의 자동화와 품질 혁신을 목표로 설립된
     AI 기반 스타트업으로, PCB 검사 분야에서 혁신적인 기술을 제공합니다.
   </p>
+</section>
+
+<section>
+  <h2>Founders</h2>
+
+  <div class="founder-grid">
+
+    <div class="card founder">
+      <img src="https://via.placeholder.com/120">
+      <h3>홍길동</h3>
+      <p>CEO</p>
+      <p>AI / Vision 전문가</p>
+    </div>
+
+    <div class="card founder">
+      <img src="https://via.placeholder.com/120">
+      <h3>김철수</h3>
+      <p>CTO</p>
+      <p>Deep Learning Engineer</p>
+    </div>
+
+  </div>
 </section>
 
 <!-- NEW: HISTORY + AWARDS -->
