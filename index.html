@@ -9,10 +9,8 @@
 :root {
   --main-red:#7A1E14;
   --bg:#070707;
-  --card:#111;
 }
 
-/* RESET */
 * { margin:0; padding:0; box-sizing:border-box; }
 
 body {
@@ -24,21 +22,17 @@ body {
 /* NAV */
 nav {
   position:fixed;
-  top:0;
   width:100%;
   padding:20px 40px;
   display:flex;
   justify-content:space-between;
-  background:rgba(0,0,0,0.5);
-  backdrop-filter:blur(15px);
-  border-bottom:1px solid rgba(255,255,255,0.05);
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
 }
-
 nav a {
   color:#ddd;
-  text-decoration:none;
   margin-left:25px;
-  transition:0.3s;
+  text-decoration:none;
 }
 nav a:hover {
   color:var(--main-red);
@@ -50,127 +44,66 @@ nav a:hover {
   display:flex;
   flex-direction:column;
   justify-content:center;
-  padding:0 80px;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(122,30,20,0.35), transparent 60%),
-    radial-gradient(circle at 80% 70%, rgba(122,30,20,0.2), transparent 60%);
+  align-items:center;
+  background: radial-gradient(circle, rgba(122,30,20,0.3), transparent 70%);
 }
-
-.hero h1 {
-  font-size:70px;
-  line-height:1.2;
-}
-
-.hero p {
-  margin-top:20px;
-  color:#aaa;
-  font-size:18px;
-}
-
-/* BUTTON */
-.btn {
-  margin-top:30px;
-  display:inline-block;
-  padding:14px 28px;
-  background:var(--main-red);
-  border-radius:8px;
-  text-decoration:none;
-  color:white;
-  transition:0.3s;
-}
-.btn:hover {
-  box-shadow:0 0 30px var(--main-red);
+.hero img {
+  max-width:400px;
+  margin-bottom:20px;
 }
 
 /* SECTION */
 section {
-  padding:120px 80px;
+  padding:120px 60px;
   max-width:1200px;
   margin:auto;
-  scroll-margin-top:100px;
 }
 
 h2 {
   font-size:40px;
-  margin-bottom:30px;
-  position:relative;
-}
-h2::after {
-  content:"";
-  width:60px;
-  height:3px;
-  background:var(--main-red);
-  position:absolute;
-  bottom:-10px;
-  left:0;
-}
-
-/* CARD */
-.card {
-  background:linear-gradient(145deg,#111,#0a0a0a);
-  padding:30px;
-  border-radius:12px;
-  border:1px solid rgba(255,255,255,0.05);
-  transition:0.3s;
-}
-.card:hover {
-  transform:translateY(-8px);
-  box-shadow:0 0 25px rgba(122,30,20,0.4);
+  margin-bottom:40px;
+  border-left:4px solid var(--main-red);
+  padding-left:10px;
 }
 
 /* GRID */
 .grid {
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:30px;
 }
 
-/* HISTORY */
-.history-wrap {
+/* CARD */
+.card {
+  background:#111;
+  padding:30px;
+  border-radius:10px;
+  transition:0.3s;
+}
+.card:hover {
+  transform:translateY(-5px);
+  box-shadow:0 0 25px rgba(122,30,20,0.4);
+}
+
+/* PRODUCT IMAGE */
+.product-img {
+  width:100%;
+  border-radius:10px;
+}
+
+/* SPLIT */
+.split {
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:50px;
+  gap:40px;
+  align-items:center;
 }
 
-.timeline {
-  border-left:2px solid var(--main-red);
-  padding-left:20px;
-}
-.timeline-item {
-  margin-bottom:20px;
-}
-.year {
+.highlight {
   color:var(--main-red);
   font-weight:bold;
 }
 
-/* FOUNDERS */
-.founder-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:30px;
-}
-
-.founder img {
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  border:2px solid var(--main-red);
-  margin-bottom:15px;
-}
-
-/* FADE IN ANIMATION */
-.fade {
-  opacity:0;
-  transform:translateY(40px);
-  transition:1s;
-}
-.fade.show {
-  opacity:1;
-  transform:translateY(0);
-}
-
-/* FOOTER */
 footer {
   text-align:center;
   padding:60px;
@@ -184,12 +117,8 @@ footer {
 
 <!-- NAV -->
 <nav>
-  <div><b style="color:var(--main-red)">REXOLUTION</b></div>
+  <div>REXOLUTION</div>
   <div>
-    <a href="#about">About</a>
-    <a href="#startup">Startup</a>
-    <a href="#founders">Founders</a>
-    <a href="#history">History</a>
     <a href="#product">Product</a>
     <a href="#tech">Technology</a>
     <a href="#contact">Contact</a>
@@ -198,95 +127,74 @@ footer {
 
 <!-- HERO -->
 <section class="hero">
-  <h1>Vision AI<br>PCB Inspection</h1>
-  <p>AI 기반 검사 자동화 솔루션</p>
-  <a href="#contact" class="btn">문의하기</a>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="fade">
-  <h2>About</h2>
-  <p>Vision AI 기술로 제조업의 품질 혁신을 이끄는 기업</p>
-</section>
-
-<!-- STARTUP -->
-<section id="startup" class="fade">
-  <h2>Startup</h2>
-  <p>AI 기반 PCB 검사 자동화를 선도하는 기술 스타트업</p>
-</section>
-
-<!-- FOUNDERS -->
-<section id="founders" class="fade">
-  <h2>Founders</h2>
-  <div class="founder-grid">
-    <div class="card">
-      <img src="https://via.placeholder.com/120">
-      <h3>홍길동</h3>
-      <p>CEO</p>
-    </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/120">
-      <h3>김철수</h3>
-      <p>CTO</p>
-    </div>
-  </div>
-</section>
-
-<!-- HISTORY -->
-<section id="history" class="fade">
-  <h2>History & Awards</h2>
-  <div class="history-wrap">
-    <div>
-      <h3>연혁</h3>
-      <div class="timeline">
-        <div class="timeline-item"><div class="year">2024</div>설립</div>
-        <div class="timeline-item"><div class="year">2025</div>제품 출시</div>
-      </div>
-    </div>
-    <div>
-      <h3>수상</h3>
-      <div class="timeline">
-        <div class="timeline-item"><div class="year">2024</div>창업 수상</div>
-      </div>
-    </div>
-  </div>
+  <img src="file_00000000a1bc71fd969990f263c74a37">
+  <img src="file_000000009a4471fdb0404359695c2383">
+  <p>Vision AI 기반 PCB 검사 자동화</p>
 </section>
 
 <!-- PRODUCT -->
-<section id="product" class="fade">
-  <h2>Product</h2>
-  <div class="grid">
-    <div class="card">Instant Inspection</div>
-    <div class="card">AI Analysis</div>
-    <div class="card">High Accuracy</div>
+<section id="product">
+  <h2>Product - REX-1</h2>
+
+  <!-- 핵심 메시지 -->
+  <p style="margin-bottom:40px;">
+    기존 Rule-based 검사에서 벗어나  
+    <span class="highlight">티칭 없이 즉시 검사 가능한 Deep Learning 검사</span>
+  </p>
+
+  <!-- 비교 이미지 -->
+  <img src="file_00000000c0bc71fda037788f2746edf9" class="product-img">
+
+  <!-- 설명 -->
+  <div class="split" style="margin-top:60px;">
+    <div>
+      <h3>AI Inspection</h3>
+      <p>
+        다양한 PCB에서도 동일한 정확도를 유지하며  
+        데이터 기반 학습으로 기존 방식 대비 높은 신뢰도를 제공합니다.
+      </p>
+    </div>
+
+    <div>
+      <img src="file_0000000082c071fd83a472599da72c40" class="product-img">
+    </div>
   </div>
+
+  <!-- 장비 -->
+  <div class="split" style="margin-top:80px;">
+    <div>
+      <img src="file_000000006f2471fdadd27973a779b4db" class="product-img">
+    </div>
+
+    <div>
+      <h3>REX-1 Equipment</h3>
+      <p>
+        실제 생산 라인에 적용 가능한 자동화 장비로  
+        검사 효율성과 품질을 동시에 향상시킵니다.
+      </p>
+    </div>
+  </div>
+
 </section>
 
 <!-- TECH -->
-<section id="tech" class="fade">
+<section id="tech">
   <h2>Technology</h2>
-  <p>딥러닝 기반 PCB 결함 검출 기술</p>
+  <p>
+    Deep Learning 기반 PCB 결함 검출 기술을 통해  
+    복잡한 패턴에서도 높은 정확도를 확보합니다.
+  </p>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="fade">
+<section id="contact">
   <h2>Contact</h2>
   <p>hjshin@rexolution.ai</p>
 </section>
 
-<footer>© 2026 Rexolution</footer>
-
-<script>
-const elements = document.querySelectorAll('.fade');
-window.addEventListener('scroll', () => {
-  elements.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if(top < window.innerHeight - 100){
-      el.classList.add('show');
-    }
-  });
-});
-</script>
+<footer>
+© 2026 Rexolution
+</footer>
 
 </body>
 </html>
