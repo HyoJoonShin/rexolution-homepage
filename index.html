@@ -132,6 +132,16 @@ footer {
   padding:60px;
   color:#777;
 }
+
+.split img {
+  transition:0.4s;
+}
+
+.split img:hover {
+  transform:scale(1.03);
+  box-shadow:0 0 30px rgba(122,30,20,0.4);
+}
+
 </style>
 
 </head>
@@ -192,7 +202,55 @@ footer {
 <!-- TECH -->
 <section id="tech">
   <h2>Technology</h2>
-  <p>Deep Learning 기반 PCB 결함 검출 기술</p>
+
+  <!-- 1️⃣ Core Architecture -->
+  <div class="split" style="margin-bottom:80px;">
+    <div>
+      <h3>Core Architecture</h3>
+      <p>
+        다양한 PCB 부품(THT, SMD, Solder)을 하나의 AI 모델에서 처리하며  
+        Siamese Network와 Topology 기반 구조로  
+        <span class="highlight">티칭 없이 즉시 검사</span>가 가능합니다.
+      </p>
+    </div>
+
+    <div>
+      <img src="images/tech1.png" class="product-img">
+    </div>
+  </div>
+
+  <!-- 2️⃣ Feature Enhancement -->
+  <div class="split" style="margin-bottom:80px;">
+    <div>
+      <img src="images/tech2.png" class="product-img">
+    </div>
+
+    <div>
+      <h3>Feature Enhancement (LoRA Adaptation)</h3>
+      <p>
+        기존 Backbone 모델의 한계를 극복하기 위해  
+        PCBA 도메인 특화 LoRA를 적용하여  
+        <span class="highlight">극성, 방향성 등 미세 특징까지 구분</span>합니다.
+      </p>
+    </div>
+  </div>
+
+  <!-- 3️⃣ Edge Case 해결 -->
+  <div class="split">
+    <div>
+      <h3>Edge Case Resolution</h3>
+      <p>
+        Siamese Network 기반 비교 학습을 통해  
+        기존 방식에서 구분이 어려운 Edge case를 해결하고  
+        <span class="highlight">불량을 명확하게 분류</span>합니다.
+      </p>
+    </div>
+
+    <div>
+      <img src="images/tech3.png" class="product-img">
+    </div>
+  </div>
+
 </section>
 
 <!-- TEAM -->
