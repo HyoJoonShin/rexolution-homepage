@@ -7,13 +7,13 @@
 
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
+
 body {
   font-family: Arial;
   background:#0b0b0b;
   color:white;
 }
 
-/* NAV */
 nav {
   position:fixed;
   top:0;
@@ -25,13 +25,13 @@ nav {
   backdrop-filter:blur(10px);
   z-index:1000;
 }
+
 nav a {
   color:white;
   text-decoration:none;
   margin-left:20px;
 }
 
-/* HERO */
 .hero {
   height:100vh;
   display:flex;
@@ -39,43 +39,59 @@ nav a {
   justify-content:center;
   padding:0 60px;
 }
+
 .hero h1 {
   font-size:64px;
 }
-.hero p {
-  margin-top:20px;
-  color:#aaa;
-}
 
-/* SECTION */
 section {
   padding:120px 60px;
   max-width:1200px;
   margin:auto;
 }
+
 h2 {
   font-size:36px;
   margin-bottom:20px;
 }
+
 .grid {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:20px;
 }
+
 .card {
   background:#111;
   padding:30px;
   border-radius:10px;
-  transition:0.3s;
 }
-.card:hover {
-  transform:translateY(-5px);
-}
+
 .highlight {
   color:#ff3b3b;
 }
 
-/* FOOTER */
+/* NEW: History layout */
+.history-wrap {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+
+.timeline {
+  border-left:2px solid #ff3b3b;
+  padding-left:20px;
+}
+
+.timeline-item {
+  margin-bottom:20px;
+}
+
+.year {
+  font-weight:bold;
+  color:#ff3b3b;
+}
+
 footer {
   text-align:center;
   padding:60px;
@@ -92,7 +108,8 @@ footer {
   <div><b>REXOLUTION</b></div>
   <div>
     <a href="#about">About</a>
-    <a href="#solution">Solution</a>
+    <a href="#startup">Startup</a>
+    <a href="#history">History</a>
     <a href="#product">Product</a>
     <a href="#tech">Technology</a>
     <a href="#contact">Contact</a>
@@ -109,37 +126,57 @@ footer {
 <section id="about">
   <h2>About Rexolution</h2>
   <p>
-    레졸루션은 Vision AI 기술을 통해 기존 제조업의 비효율을 해결하는
-    PCB 검사 자동화 솔루션 기업입니다.
+    레졸루션은 Vision AI 기술을 통해 제조업의 비효율을 해결하는
+    AI 검사 자동화 기업입니다.
   </p>
 </section>
 
-<!-- PROBLEM -->
-<section>
-  <h2>Problem</h2>
-  <div class="grid">
-    <div class="card">
-      육안 검사 의존<br><br>
-      작업자 중심 검사로 정확도 한계 존재
-    </div>
-    <div class="card">
-      높은 인력 이탈률<br><br>
-      숙련 인력 유지 어려움
-    </div>
-    <div class="card">
-      검사 비효율<br><br>
-      티칭 기반 방식으로 시간 과다 소요
-    </div>
-  </div>
-</section>
-
-<!-- SOLUTION -->
-<section id="solution">
-  <h2>Solution</h2>
+<!-- NEW: STARTUP -->
+<section id="startup">
+  <h2>Startup</h2>
   <p>
-    기존 Rule-based 검사 방식에서 벗어나
-    <span class="highlight">딥러닝 기반 자동 검사</span>로 전환
+    레졸루션은 제조업의 자동화와 품질 혁신을 목표로 설립된
+    AI 기반 스타트업으로, PCB 검사 분야에서 혁신적인 기술을 제공합니다.
   </p>
+</section>
+
+<!-- NEW: HISTORY + AWARDS -->
+<section id="history">
+  <h2>History & Awards</h2>
+
+  <div class="history-wrap">
+
+    <!-- LEFT: HISTORY -->
+    <div>
+      <h3>연혁</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="year">2024</div>
+          <div>REXOLUTION 설립</div>
+        </div>
+        <div class="timeline-item">
+          <div class="year">2025</div>
+          <div>AI 검사 솔루션 개발 완료</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: AWARDS -->
+    <div>
+      <h3>수상 및 성과</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="year">2024</div>
+          <div>창업 경진대회 수상</div>
+        </div>
+        <div class="timeline-item">
+          <div class="year">2025</div>
+          <div>정부 지원사업 선정</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <!-- PRODUCT -->
@@ -147,8 +184,8 @@ footer {
   <h2>REX-1</h2>
   <div class="grid">
     <div class="card">티칭 없이 즉시 검사</div>
-    <div class="card">다품종 소량 생산 최적화</div>
-    <div class="card">높은 정확도</div>
+    <div class="card">다품종 대응</div>
+    <div class="card">고정밀 AI 분석</div>
   </div>
 </section>
 
@@ -159,16 +196,6 @@ footer {
     Siamese Network 기반 구조와 Topology 분석을 통해
     PCB 결함을 정밀하게 검출합니다.
   </p>
-</section>
-
-<!-- PERFORMANCE -->
-<section>
-  <h2>Performance</h2>
-  <div class="grid">
-    <div class="card">검사시간 89% 단축</div>
-    <div class="card">5개 고객사 확보</div>
-    <div class="card">127,000+ 데이터 확보</div>
-  </div>
 </section>
 
 <!-- CONTACT -->
