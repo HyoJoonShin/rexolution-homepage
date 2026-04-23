@@ -142,6 +142,79 @@ footer {
   box-shadow:0 0 30px rgba(122,30,20,0.4);
 }
 
+.hero {
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+
+  background:
+    radial-gradient(circle at 20% 30%, rgba(122,30,20,0.4), transparent 60%),
+    radial-gradient(circle at 80% 70%, rgba(122,30,20,0.25), transparent 60%),
+    #070707;
+}
+
+/* 배경 효과 (AI 느낌) */
+.hero::before {
+  content:"";
+  position:absolute;
+  width:800px;
+  height:800px;
+  background: radial-gradient(circle, rgba(122,30,20,0.2), transparent 70%);
+  top:-200px;
+  left:-200px;
+  filter:blur(100px);
+}
+
+/* 내용 */
+.hero-content {
+  z-index:2;
+}
+
+.hero-logo {
+  width:120px;
+  margin-bottom:10px;
+}
+
+.hero-text {
+  width:300px;
+  margin-bottom:30px;
+}
+
+.hero h1 {
+  font-size:60px;
+  line-height:1.2;
+  margin-bottom:20px;
+}
+
+.hero p {
+  color:#aaa;
+  font-size:18px;
+}
+
+/* 버튼 */
+.btn {
+  margin-top:30px;
+  display:inline-block;
+  padding:14px 28px;
+  background:var(--main-red);
+  border-radius:8px;
+  text-decoration:none;
+  color:white;
+  transition:0.3s;
+}
+.btn:hover {
+  box-shadow:0 0 30px var(--main-red);
+}
+
+/* 강조 */
+.highlight {
+  color:var(--main-red);
+}
+
 </style>
 
 </head>
@@ -150,7 +223,10 @@ footer {
 
 <!-- NAV -->
 <nav>
-  <div style="color:var(--main-red); font-weight:bold;">REXOLUTION</div>
+  <div style="display:flex; align-items:center; gap:10px;">
+    <img src="images/logo.png" style="height:28px;">
+    <img src="images/text.png" style="height:18px;">
+  </div>
   <div>
     <a href="#product">Product</a>
     <a href="#tech">Technology</a>
@@ -160,11 +236,25 @@ footer {
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
-  <img src="images/logo.png">
-  <img src="images/text.png">
-  <p>Vision AI 기반 PCB 검사 자동화</p>
+
+  <div class="hero-content">
+    <img src="images/logo.png" class="hero-logo">
+    <img src="images/text.png" class="hero-text">
+
+    <h1>
+      Vision AI for<br>
+      <span class="highlight">PCB Inspection</span>
+    </h1>
+
+    <p>
+      티칭 없이 즉시 검사 가능한<br>
+      Deep Learning 기반 검사 솔루션
+    </p>
+
+    <a href="#product" class="btn">Explore Product</a>
+  </div>
+
 </section>
 
 <!-- PRODUCT -->
