@@ -1,6 +1,114 @@
 <!DOCTYPE html>
-<html>
-  <body>
-    <h1>홈페이지 테스트 성공 🚀</h1>
-  </body>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rexolution</title>
+
+<style>
+body {
+  margin:0;
+  font-family: Arial;
+  background:#0b0b0b;
+  color:white;
+}
+section {
+  padding:80px 20px;
+  max-width:1200px;
+  margin:auto;
+}
+h1,h2 {
+  margin-bottom:20px;
+}
+.hero {
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.red { color:#ff3b3b; }
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+.card {
+  background:#111;
+  padding:20px;
+  border-radius:10px;
+}
+.btn {
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 24px;
+  background:#ff3b3b;
+  color:white;
+  text-decoration:none;
+}
+</style>
+
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Vision AI for PCB Inspection</h1>
+  <h2 class="red">REXOLUTION</h2>
+  <p>비전 AI 기반 PCB-A 검사 자동화 솔루션</p>
+  <a href="#contact" class="btn">문의하기</a>
+</section>
+
+<!-- PROBLEM -->
+<section>
+  <h2>문제</h2>
+  <div class="grid">
+    <div class="card">육안 검사 의존</div>
+    <div class="card">높은 인력 이탈률</div>
+    <div class="card">검사 정확도 한계</div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section>
+  <h2>해결</h2>
+  <p>딥러닝 기반 자동 검사 시스템으로 기존 Rule-based 방식의 한계를 극복</p>
+</section>
+
+<!-- PRODUCT -->
+<section>
+  <h2>REX-1</h2>
+  <p>티칭 없이 즉시 검사 가능한 AI 기반 검사 장비</p>
+  <div class="grid">
+    <div class="card">Instant Inspection</div>
+    <div class="card">High Accuracy</div>
+    <div class="card">Low Setup Cost</div>
+  </div>
+</section>
+
+<!-- TECHNOLOGY -->
+<section>
+  <h2>기술</h2>
+  <p>
+  Siamese Network + Topology 기반 AI로 
+  PCB 결함을 정밀하게 검출
+  </p>
+</section>
+
+<!-- PERFORMANCE -->
+<section>
+  <h2>성과</h2>
+  <div class="grid">
+    <div class="card">검사시간 89% 단축</div>
+    <div class="card">5개 고객사 확보</div>
+    <div class="card">127,000+ 데이터</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>hjshin@rexolution.ai</p>
+</section>
+
+</body>
 </html>
