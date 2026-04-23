@@ -8,19 +8,16 @@
 <style>
 :root {
   --main-red:#7A1E14;
-  --bg:#0b0b0b;
+  --bg:#070707;
   --card:#111;
 }
 
-* {
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+/* RESET */
+* { margin:0; padding:0; box-sizing:border-box; }
 
 body {
-  font-family: Arial;
-  background:var(--bg);
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
   color:white;
 }
 
@@ -32,15 +29,19 @@ nav {
   padding:20px 40px;
   display:flex;
   justify-content:space-between;
-  background:rgba(0,0,0,0.6);
-  backdrop-filter:blur(10px);
-  z-index:1000;
+  background:rgba(0,0,0,0.5);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
 nav a {
-  color:white;
+  color:#ddd;
   text-decoration:none;
-  margin-left:20px;
+  margin-left:25px;
+  transition:0.3s;
+}
+nav a:hover {
+  color:var(--main-red);
 }
 
 /* HERO */
@@ -49,90 +50,98 @@ nav a {
   display:flex;
   flex-direction:column;
   justify-content:center;
-  padding:0 60px;
-  background: radial-gradient(circle at 30% 30%, rgba(122,30,20,0.3), transparent 60%);
+  padding:0 80px;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(122,30,20,0.35), transparent 60%),
+    radial-gradient(circle at 80% 70%, rgba(122,30,20,0.2), transparent 60%);
 }
 
 .hero h1 {
-  font-size:64px;
+  font-size:70px;
+  line-height:1.2;
 }
 
 .hero p {
   margin-top:20px;
   color:#aaa;
+  font-size:18px;
+}
+
+/* BUTTON */
+.btn {
+  margin-top:30px;
+  display:inline-block;
+  padding:14px 28px;
+  background:var(--main-red);
+  border-radius:8px;
+  text-decoration:none;
+  color:white;
+  transition:0.3s;
+}
+.btn:hover {
+  box-shadow:0 0 30px var(--main-red);
 }
 
 /* SECTION */
 section {
-  padding:120px 60px;
+  padding:120px 80px;
   max-width:1200px;
   margin:auto;
   scroll-margin-top:100px;
 }
 
 h2 {
-  font-size:36px;
-  margin-bottom:20px;
+  font-size:40px;
+  margin-bottom:30px;
+  position:relative;
+}
+h2::after {
+  content:"";
+  width:60px;
+  height:3px;
+  background:var(--main-red);
+  position:absolute;
+  bottom:-10px;
+  left:0;
+}
+
+/* CARD */
+.card {
+  background:linear-gradient(145deg,#111,#0a0a0a);
+  padding:30px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.05);
+  transition:0.3s;
+}
+.card:hover {
+  transform:translateY(-8px);
+  box-shadow:0 0 25px rgba(122,30,20,0.4);
 }
 
 /* GRID */
 .grid {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
-
-/* CARD */
-.card {
-  background:var(--card);
-  padding:30px;
-  border-radius:10px;
-  border:1px solid rgba(255,255,255,0.05);
-  transition:0.3s;
-}
-.card:hover {
-  transform:translateY(-5px);
-}
-
-/* TEXT */
-.highlight {
-  color:var(--main-red);
-}
-
-/* BUTTON */
-.btn {
-  background:var(--main-red);
-  padding:12px 24px;
-  display:inline-block;
-  margin-top:20px;
-  text-decoration:none;
-  color:white;
-  border-radius:6px;
-  transition:0.3s;
-}
-.btn:hover {
-  box-shadow:0 0 25px var(--main-red);
+  gap:25px;
 }
 
 /* HISTORY */
 .history-wrap {
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:40px;
+  gap:50px;
 }
 
 .timeline {
   border-left:2px solid var(--main-red);
   padding-left:20px;
 }
-
 .timeline-item {
   margin-bottom:20px;
 }
-
 .year {
-  font-weight:bold;
   color:var(--main-red);
+  font-weight:bold;
 }
 
 /* FOUNDERS */
@@ -142,23 +151,30 @@ h2 {
   gap:30px;
 }
 
-.founder {
-  text-align:center;
-}
-
 .founder img {
   width:120px;
   height:120px;
   border-radius:50%;
-  margin-bottom:15px;
   border:2px solid var(--main-red);
+  margin-bottom:15px;
+}
+
+/* FADE IN ANIMATION */
+.fade {
+  opacity:0;
+  transform:translateY(40px);
+  transition:1s;
+}
+.fade.show {
+  opacity:1;
+  transform:translateY(0);
 }
 
 /* FOOTER */
 footer {
   text-align:center;
   padding:60px;
-  color:#888;
+  color:#777;
 }
 </style>
 
@@ -168,9 +184,10 @@ footer {
 
 <!-- NAV -->
 <nav>
-  <div><b>REXOLUTION</b></div>
+  <div><b style="color:var(--main-red)">REXOLUTION</b></div>
   <div>
     <a href="#about">About</a>
+    <a href="#startup">Startup</a>
     <a href="#founders">Founders</a>
     <a href="#history">History</a>
     <a href="#product">Product</a>
@@ -182,107 +199,94 @@ footer {
 <!-- HERO -->
 <section class="hero">
   <h1>Vision AI<br>PCB Inspection</h1>
-  <p>비전 AI 기반 PCB-A 검사 자동화 솔루션</p>
+  <p>AI 기반 검사 자동화 솔루션</p>
   <a href="#contact" class="btn">문의하기</a>
 </section>
 
 <!-- ABOUT -->
-<section id="about">
-  <h2>About Rexolution</h2>
-  <p>
-    레졸루션은 Vision AI 기술을 통해 제조업의 비효율을 해결하는
-    AI 검사 자동화 기업입니다.
-  </p>
+<section id="about" class="fade">
+  <h2>About</h2>
+  <p>Vision AI 기술로 제조업의 품질 혁신을 이끄는 기업</p>
+</section>
+
+<!-- STARTUP -->
+<section id="startup" class="fade">
+  <h2>Startup</h2>
+  <p>AI 기반 PCB 검사 자동화를 선도하는 기술 스타트업</p>
 </section>
 
 <!-- FOUNDERS -->
-<section id="founders">
+<section id="founders" class="fade">
   <h2>Founders</h2>
-
   <div class="founder-grid">
-
-    <div class="card founder">
+    <div class="card">
       <img src="https://via.placeholder.com/120">
       <h3>홍길동</h3>
       <p>CEO</p>
-      <p>Vision AI 전문가</p>
     </div>
-
-    <div class="card founder">
+    <div class="card">
       <img src="https://via.placeholder.com/120">
       <h3>김철수</h3>
       <p>CTO</p>
-      <p>Deep Learning Engineer</p>
     </div>
-
   </div>
 </section>
 
 <!-- HISTORY -->
-<section id="history">
+<section id="history" class="fade">
   <h2>History & Awards</h2>
-
   <div class="history-wrap">
-
     <div>
       <h3>연혁</h3>
       <div class="timeline">
-        <div class="timeline-item">
-          <div class="year">2024</div>
-          <div>REXOLUTION 설립</div>
-        </div>
-        <div class="timeline-item">
-          <div class="year">2025</div>
-          <div>AI 검사 솔루션 개발 완료</div>
-        </div>
+        <div class="timeline-item"><div class="year">2024</div>설립</div>
+        <div class="timeline-item"><div class="year">2025</div>제품 출시</div>
       </div>
     </div>
-
     <div>
-      <h3>수상 및 성과</h3>
+      <h3>수상</h3>
       <div class="timeline">
-        <div class="timeline-item">
-          <div class="year">2024</div>
-          <div>창업 경진대회 수상</div>
-        </div>
-        <div class="timeline-item">
-          <div class="year">2025</div>
-          <div>정부 지원사업 선정</div>
-        </div>
+        <div class="timeline-item"><div class="year">2024</div>창업 수상</div>
       </div>
     </div>
-
   </div>
 </section>
 
 <!-- PRODUCT -->
-<section id="product">
-  <h2>REX-1</h2>
+<section id="product" class="fade">
+  <h2>Product</h2>
   <div class="grid">
-    <div class="card">티칭 없이 즉시 검사</div>
-    <div class="card">다품종 대응</div>
-    <div class="card">고정밀 AI 분석</div>
+    <div class="card">Instant Inspection</div>
+    <div class="card">AI Analysis</div>
+    <div class="card">High Accuracy</div>
   </div>
 </section>
 
 <!-- TECH -->
-<section id="tech">
+<section id="tech" class="fade">
   <h2>Technology</h2>
-  <p>
-    Siamese Network 기반 구조와 Topology 분석을 통해
-    PCB 결함을 정밀하게 검출합니다.
-  </p>
+  <p>딥러닝 기반 PCB 결함 검출 기술</p>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
+<section id="contact" class="fade">
   <h2>Contact</h2>
   <p>hjshin@rexolution.ai</p>
 </section>
 
-<footer>
-  © 2026 Rexolution Inc.
-</footer>
+<footer>© 2026 Rexolution</footer>
+
+<script>
+const elements = document.querySelectorAll('.fade');
+window.addEventListener('scroll', () => {
+  elements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      el.classList.add('show');
+    }
+  });
+});
+</script>
 
 </body>
 </html>
