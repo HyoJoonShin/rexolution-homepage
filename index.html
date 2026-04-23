@@ -12,75 +12,19 @@
   --card:#111;
 }
 
-body {
-  background:var(--bg);
-  color:white;
-  font-family:Arial;
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
-
-/* 강조 컬러 */
-.highlight {
-  color:var(--main-red);
-}
-
-/* 버튼 */
-.btn {
-  background:var(--main-red);
-  padding:12px 24px;
-  display:inline-block;
-  margin-top:20px;
-  text-decoration:none;
-  color:white;
-  border-radius:6px;
-  transition:0.3s;
-}
-.btn:hover {
-  box-shadow:0 0 20px var(--main-red);
-}
-
-/* 카드 */
-.card {
-  background:var(--card);
-  padding:30px;
-  border-radius:10px;
-  border:1px solid rgba(255,255,255,0.05);
-}
-
-/* 타임라인 */
-.timeline {
-  border-left:2px solid var(--main-red);
-  padding-left:20px;
-}
-
-/* NEW: Founder */
-.founder-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:30px;
-}
-
-.founder {
-  text-align:center;
-}
-
-.founder img {
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  margin-bottom:15px;
-  border:2px solid var(--main-red);
-}
-</style>
-  
-<style>
-* { margin:0; padding:0; box-sizing:border-box; }
 
 body {
   font-family: Arial;
-  background:#0b0b0b;
+  background:var(--bg);
   color:white;
 }
 
+/* NAV */
 nav {
   position:fixed;
   top:0;
@@ -99,22 +43,31 @@ nav a {
   margin-left:20px;
 }
 
+/* HERO */
 .hero {
   height:100vh;
   display:flex;
   flex-direction:column;
   justify-content:center;
   padding:0 60px;
+  background: radial-gradient(circle at 30% 30%, rgba(122,30,20,0.3), transparent 60%);
 }
 
 .hero h1 {
   font-size:64px;
 }
 
+.hero p {
+  margin-top:20px;
+  color:#aaa;
+}
+
+/* SECTION */
 section {
   padding:120px 60px;
   max-width:1200px;
   margin:auto;
+  scroll-margin-top:100px;
 }
 
 h2 {
@@ -122,23 +75,46 @@ h2 {
   margin-bottom:20px;
 }
 
+/* GRID */
 .grid {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:20px;
 }
 
+/* CARD */
 .card {
-  background:#111;
+  background:var(--card);
   padding:30px;
   border-radius:10px;
+  border:1px solid rgba(255,255,255,0.05);
+  transition:0.3s;
+}
+.card:hover {
+  transform:translateY(-5px);
 }
 
+/* TEXT */
 .highlight {
-  color:#ff3b3b;
+  color:var(--main-red);
 }
 
-/* NEW: History layout */
+/* BUTTON */
+.btn {
+  background:var(--main-red);
+  padding:12px 24px;
+  display:inline-block;
+  margin-top:20px;
+  text-decoration:none;
+  color:white;
+  border-radius:6px;
+  transition:0.3s;
+}
+.btn:hover {
+  box-shadow:0 0 25px var(--main-red);
+}
+
+/* HISTORY */
 .history-wrap {
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -146,7 +122,7 @@ h2 {
 }
 
 .timeline {
-  border-left:2px solid #ff3b3b;
+  border-left:2px solid var(--main-red);
   padding-left:20px;
 }
 
@@ -156,9 +132,29 @@ h2 {
 
 .year {
   font-weight:bold;
-  color:#ff3b3b;
+  color:var(--main-red);
 }
 
+/* FOUNDERS */
+.founder-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.founder {
+  text-align:center;
+}
+
+.founder img {
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  margin-bottom:15px;
+  border:2px solid var(--main-red);
+}
+
+/* FOOTER */
 footer {
   text-align:center;
   padding:60px;
@@ -176,6 +172,7 @@ footer {
   <div>
     <a href="#about">About</a>
     <a href="#startup">Startup</a>
+    <a href="#founders">Founders</a>
     <a href="#history">History</a>
     <a href="#product">Product</a>
     <a href="#tech">Technology</a>
@@ -187,6 +184,7 @@ footer {
 <section class="hero">
   <h1>Vision AI<br>PCB Inspection</h1>
   <p>비전 AI 기반 PCB-A 검사 자동화 솔루션</p>
+  <a href="#contact" class="btn">문의하기</a>
 </section>
 
 <!-- ABOUT -->
@@ -198,16 +196,17 @@ footer {
   </p>
 </section>
 
-<!-- NEW: STARTUP -->
+<!-- STARTUP -->
 <section id="startup">
   <h2>Startup</h2>
   <p>
-    레졸루션은 제조업의 자동화와 품질 혁신을 목표로 설립된
-    AI 기반 스타트업으로, PCB 검사 분야에서 혁신적인 기술을 제공합니다.
+    레졸루션은 제조업 자동화와 품질 혁신을 목표로 설립된
+    AI 기반 스타트업입니다.
   </p>
 </section>
 
-<section>
+<!-- FOUNDERS -->
+<section id="founders">
   <h2>Founders</h2>
 
   <div class="founder-grid">
@@ -216,7 +215,7 @@ footer {
       <img src="https://via.placeholder.com/120">
       <h3>홍길동</h3>
       <p>CEO</p>
-      <p>AI / Vision 전문가</p>
+      <p>Vision AI 전문가</p>
     </div>
 
     <div class="card founder">
@@ -229,13 +228,12 @@ footer {
   </div>
 </section>
 
-<!-- NEW: HISTORY + AWARDS -->
+<!-- HISTORY -->
 <section id="history">
   <h2>History & Awards</h2>
 
   <div class="history-wrap">
 
-    <!-- LEFT: HISTORY -->
     <div>
       <h3>연혁</h3>
       <div class="timeline">
@@ -250,7 +248,6 @@ footer {
       </div>
     </div>
 
-    <!-- RIGHT: AWARDS -->
     <div>
       <h3>수상 및 성과</h3>
       <div class="timeline">
