@@ -39,6 +39,16 @@ nav a:hover {
   color:var(--main-red);
 }
 
+@keyframes glowMove {
+  0% { transform:translate(0,0); }
+  50% { transform:translate(50px, -50px); }
+  100% { transform:translate(0,0); }
+}
+
+.hero::before {
+  animation: glowMove 10s infinite ease-in-out;
+}
+
 /* HERO */
 .hero {
   height:100vh;
