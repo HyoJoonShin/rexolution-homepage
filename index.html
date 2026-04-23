@@ -49,6 +49,21 @@ nav a:hover {
   animation: glowMove 10s infinite ease-in-out;
 }
 
+@keyframes fadeUp {
+  from {
+    opacity:0;
+    transform:translateY(30px);
+  }
+  to {
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.hero-content {
+  animation: fadeUp 1.2s ease forwards;
+}
+
 /* HERO */
 .hero {
   height:100vh;
