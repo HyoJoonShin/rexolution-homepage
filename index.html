@@ -256,6 +256,48 @@ footer {
   pointer-events:none; /* 클릭 방해 안함 */
 }
 
+/* 모바일 대응 */
+@media (max-width: 768px) {
+
+  /* 패딩 줄이기 */
+  section {
+    padding: 80px 20px;
+  }
+
+  /* hero 텍스트 줄이기 */
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-text {
+    width: 200px;
+  }
+
+  /* nav 정리 */
+  nav {
+    padding: 15px 20px;
+  }
+
+  nav div:last-child {
+    display:none; /* 메뉴 숨김 (간단 처리) */
+  }
+
+  /* 2열 → 1열 */
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  /* grid 카드 */
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* 이미지 */
+  .product-img {
+    width:100%;
+  }
+
+}
 
 </style>
 
