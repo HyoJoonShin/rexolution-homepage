@@ -354,3 +354,9 @@ nav {
     grid-template-columns: 1fr;
   }
 }
+
+.link-icon {
+  font-size: 12px;
+  margin-left: 6px;
+  opacity: 0.7;
+}
