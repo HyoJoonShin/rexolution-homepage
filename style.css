@@ -1,0 +1,50 @@
+body {
+  background:#070707;
+  color:white;
+  font-family:sans-serif;
+}
+
+/* HERO */
+.hero {
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.hero h1 {
+  font-size:64px;
+  margin-bottom:20px;
+}
+
+.hero-desc {
+  font-size:20px;
+  color:#aaa;
+}
+
+.highlight {
+  color:#7A1E14;
+}
+
+/* NAV */
+nav {
+  position:fixed;
+  width:100%;
+  padding:20px;
+  display:flex;
+  justify-content:space-between;
+}
+
+nav a {
+  margin-left:20px;
+  color:white;
+  text-decoration:none;
+}
+
+/* CARD */
+.card {
+  background:#111;
+  padding:30px;
+  margin:20px 0;
+}
