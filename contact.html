@@ -17,9 +17,9 @@
     <img src="images/text.png" alt="Rexolution">
   </a>
   <div class="nav-links">
-    <a href="solution.html">솔루션</a>
-    <a href="about.html">회사 소개</a>
-    <a href="contact.html" class="active" aria-current="page">문의 및 위치</a>
+    <a href="solution.html">Solution</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html" class="active" aria-current="page">Contact</a>
   </div>
 </nav>
 
@@ -27,93 +27,99 @@
   <section class="page-hero">
     <div class="page-hero-inner">
       <p class="eyebrow">Let's connect</p>
-      <h1>문의 및 위치</h1>
+      <h1>Contact</h1>
       <p>
-        Reach out for product inquiries, partnership discussions, or a demo of
-        the Rexolution inspection workflow.
+        Product inquiries, partnership discussions, and demo requests are all
+        welcome through the form below.
       </p>
     </div>
   </section>
 
-    <section class="content">
-
+  <section class="content">
     <div class="contact-grid">
-
-        <!-- 문의하기 -->
-        <article class="card">
-        <h3>문의하기</h3>
-
+      <article class="card">
+        <h3>Send Inquiry</h3>
         <p>
-            제품 문의, 도입 상담, 파트너십 관련 문의를 환영합니다.
+          Leave your contact details and message below for product, partnership,
+          or demo requests.
         </p>
 
         <form id="contact-form" class="contact-form">
+          <div class="form-row">
+            <input type="text" name="last_name" placeholder="Last name" required>
+            <input type="text" name="first_name" placeholder="First name" required>
+          </div>
 
-            <!-- 성 / 이름 -->
-            <div class="form-row">
-            <input type="text" name="last_name" placeholder="성" required>
-            <input type="text" name="first_name" placeholder="이름" required>
-            </div>
+          <input type="text" name="company" placeholder="Company">
 
-            <!-- 회사 -->
-            <input type="text" name="company" placeholder="회사명">
+          <div class="form-row">
+            <input type="text" name="department" placeholder="Department">
+            <input type="text" name="position" placeholder="Position / Title">
+          </div>
 
-            <!-- 부서 / 직책 -->
-            <div class="form-row">
-            <input type="text" name="department" placeholder="부서">
-            <input type="text" name="position" placeholder="직책 / 직급">
-            </div>
+          <input type="email" name="user_email" placeholder="Email" required>
 
-            <!-- 이메일 -->
-            <input type="email" name="user_email" placeholder="이메일" required>
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            inputmode="numeric"
+            autocomplete="tel"
+            maxlength="13"
+            placeholder="000-0000-0000"
+            pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+            title="Please use the 000-0000-0000 format">
 
-            <!-- 휴대전화 -->
-            <input type="text" name="phone" placeholder="휴대전화">
+          <textarea name="message" placeholder="Write your message here" required></textarea>
 
-            <!-- 문의 내용 -->
-            <textarea name="message" placeholder="문의 내용을 입력해주세요" required></textarea>
-
-            <button type="submit" class="btn">문의 보내기</button>
-
+          <button type="submit" class="btn contact-submit">Send Inquiry</button>
         </form>
 
         <p id="form-status" style="margin-top:10px; color:#888;"></p>
+      </article>
 
-        </article>
+      <article class="card">
+        <h3>Location</h3>
 
-
-        <!-- 지도 + 정보 -->
-        <article class="card">
-        <h3>오시는 길</h3>
-
-        <iframe 
-            src="https://map.naver.com/p/search/%EB%A0%88%EC%A1%B8%EB%A3%A8%EC%85%98?c=17.33,0,0,0,dh"
-            width="100%" 
-            height="400" 
-            style="border:0; border-radius:10px;">
+        <iframe
+          src="https://map.naver.com/p/search/%EB%A0%88%EC%A1%B8%EB%A3%A8%EC%85%98?c=17.33,0,0,0,dh"
+          width="100%"
+          height="400"
+          style="border:0; border-radius:10px;">
         </iframe>
 
-        <!-- 정보 -->
         <div style="margin-top:20px; line-height:1.6;">
-
-            <p><strong>주소</strong>
-             서울특별시 서초구 매헌로 16 하이브랜드 AI양재허브 1201호</p>
-
-            <p><strong>전화번호</strong>
-             010-9048-1583</p>
-
-            <p><strong>이메일</strong>
-             hjshin@rexolution.ai</p>
-
+          <p><strong>Phone</strong> 010-9048-1583</p>
+          <p><strong>Email</strong> hjshin@rexolution.ai</p>
         </div>
-
-        </article>
-
+      </article>
     </div>
-
-    </section>
+  </section>
 </main>
 
 <script src="bg.js"></script>
+<script>
+  const phoneInput = document.getElementById("phone")
+
+  function formatPhoneNumber(value) {
+    const digits = value.replace(/\D/g, "").slice(0, 11)
+
+    if (digits.length > 7) {
+      return `${digits.slice(0, 3)}-${digits.slice(3, 7)}-${digits.slice(7)}`
+    }
+
+    if (digits.length > 3) {
+      return `${digits.slice(0, 3)}-${digits.slice(3)}`
+    }
+
+    return digits
+  }
+
+  if (phoneInput) {
+    phoneInput.addEventListener("input", (event) => {
+      event.target.value = formatPhoneNumber(event.target.value)
+    })
+  }
+</script>
 </body>
 </html>
