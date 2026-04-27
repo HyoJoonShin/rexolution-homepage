@@ -120,29 +120,9 @@
 </main>
 
 <script src="bg.js"></script>
-<script>
-  const phoneInput = document.getElementById("phone");
 
-  function formatPhoneNumber(value) {
-    const digits = value.replace(/\D/g, "").slice(0, 11);
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-    if (digits.length > 7) {
-      return `${digits.slice(0, 3)}-${digits.slice(3, 7)}-${digits.slice(7)}`;
-    }
-
-    if (digits.length > 3) {
-      return `${digits.slice(0, 3)}-${digits.slice(3)}`;
-    }
-
-    return digits;
-  }
-
-  if (phoneInput) {
-    phoneInput.addEventListener("input", (event) => {
-      event.target.value = formatPhoneNumber(event.target.value);
-    });
-  }
-</script>
 <script>
 emailjs.init("DDwANV5nKbdEEBaYm");
 
@@ -159,7 +139,8 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
   ).then(() => {
     status.innerText = "문의가 정상적으로 전송되었습니다.";
     this.reset();
-  }).catch(() => {
+  }).catch((err) => {
+    console.error(err);
     status.innerText = "전송 실패. 다시 시도해주세요.";
   });
 });
