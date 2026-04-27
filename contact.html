@@ -126,6 +126,28 @@
 <script>
 emailjs.init("DDwANV5nKbdEEBaYm");
 
+const phoneInput = document.getElementById("phone");
+
+function formatPhoneNumber(value) {
+  const digits = value.replace(/\D/g, "").slice(0, 11);
+
+  if (digits.length > 7) {
+    return `${digits.slice(0, 3)}-${digits.slice(3, 7)}-${digits.slice(7)}`;
+  }
+
+  if (digits.length > 3) {
+    return `${digits.slice(0, 3)}-${digits.slice(3)}`;
+  }
+
+  return digits;
+}
+
+if (phoneInput) {
+  phoneInput.addEventListener("input", function(e) {
+    e.target.value = formatPhoneNumber(e.target.value);
+  });
+}
+
 document.getElementById("contact-form").addEventListener("submit", function(e) {
   e.preventDefault();
 
