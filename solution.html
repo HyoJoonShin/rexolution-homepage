@@ -112,61 +112,67 @@
     <section class="content">
     <h2 class="section-title">제품 상세 스펙</h2>
 
-    <div class="card" style="display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center;">
+        <div class="card" style="display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center;">
 
-        <!-- 왼쪽: 표 -->
-        <table style="width:100%; border-collapse:collapse;">
-        <tbody>
+            <!-- 왼쪽 전체 묶기 -->
+            <div>
 
-            <tr>
-            <td style="padding:10px; color:var(--text-soft);">Size</td>
-            <td style="padding:10px;">1200 x 1000 x 1850 mm</td>
-            </tr>
+                <!-- 표 -->
+                <table style="width:100%; border-collapse:collapse;">
+                    <tbody>
 
-            <tr>
-            <td style="padding:10px; color:var(--text-soft);">Board Size</td>
-            <td style="padding:10px;">
-                [Option1] Max. 300 x 225 mm<br>
-                [Option2] Max. 250 x 187.5 mm
-            </td>
-            </tr>
+                        <tr>
+                            <td style="padding:10px; color:var(--text-soft);">Size</td>
+                            <td style="padding:10px;">1200 x 1000 x 1850 mm</td>
+                        </tr>
 
-            <tr>
-            <td style="padding:10px; color:var(--text-soft);">검사 항목</td>
-            <td style="padding:10px;">
-                [THT] 미삽, 역삽, 오삽, 미납, 소납, 냉땜, 핀홀, 쇼츠, 납뿔<br>
-                [SMT] 맨하탄, 모로섬<br>
-                [ETC] 솔더볼, 솔더찌꺼기
-            </td>
-            </tr>
+                        <tr>
+                            <td style="padding:10px; color:var(--text-soft);">Board Size</td>
+                            <td style="padding:10px;">
+                                [Option1] Max. 300 x 225 mm<br>
+                                [Option2] Max. 250 x 187.5 mm
+                            </td>
+                        </tr>
 
-            <tr>
-            <td style="padding:10px; color:var(--text-soft);">Tact Time*</td>
-            <td style="padding:10px;">
-                [Option3] 약 20초
-                [Option4] 약 50초
-            </td>
-            </tr>
+                        <tr>
+                            <td style="padding:10px; color:var(--text-soft);">검사 항목</td>
+                            <td style="padding:10px;">
+                                [THT] 미삽, 역삽, 오삽, 미납, 소납, 냉땜, 핀홀, 쇼츠, 납뿔<br>
+                                [SMT] 맨하탄, 모로섬<br>
+                                [ETC] 솔더볼, 솔더찌꺼기
+                            </td>
+                        </tr>
 
-            <tr>
-            <td style="padding:10px; color:var(--text-soft);">Weight</td>
-            <td style="padding:10px;">약 200kg</td>
-            </tr>
+                        <tr>
+                            <td style="padding:10px; color:var(--text-soft);">Tact Time*</td>
+                            <td style="padding:10px;">
+                                [Option3] 약 20초<br>
+                                [Option4] 약 50초
+                            </td>
+                        </tr>
 
-        </tbody>
-        </table>
+                        <tr>
+                            <td style="padding:10px; color:var(--text-soft);">Weight</td>
+                            <td style="padding:10px;">약 200kg</td>
+                        </tr>
 
-        <p style="margin-top:10px; font-size:13px; color:#888; line-height:1.5;">
-            * Board Size 300 x 225 mm 기준 값임<br>
-            장비 설치 장소 및 네트워크 환경에 따라 차이가 발생할 수 있습니다.
-        </p>
+                    </tbody>
+                </table>
 
-        <!-- 오른쪽: 이미지 -->
-        <div>
-        <img src="images/machine.png" style="width:60%; border-radius:12px;">
+                <!-- 주석 -->
+                <p style="margin-top:10px; font-size:13px; color:#888; line-height:1.5;">
+                    * Board Size 300 x 225 mm 기준 값임<br>
+                    장비 설치 장소 및 네트워크 환경에 따라 차이가 발생할 수 있습니다.
+                </p>
+
+            </div>
+
+            <!-- 오른쪽 -->
+            <div style="text-align:center;">
+                <img src="images/machine.png" style="max-width:300px; width:100%; border-radius:12px;">
+            </div>
+
         </div>
-
-    </div>
     </section>
 </main>
 
