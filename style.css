@@ -463,3 +463,9 @@ nav {
 .name-row h3 {
   margin: 0;
 }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 위아래 배치 */
+  gap: 20px;
+}
