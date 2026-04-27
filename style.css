@@ -250,7 +250,8 @@ nav {
 .timeline {
   display: grid;
   gap: 24px;
-  padding-left: 22px;
+  margin-left: 12px;
+  padding-left: 26px;
   border-left: 2px solid rgba(212, 90, 73, 0.65);
 }
 
@@ -262,7 +263,7 @@ nav {
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: -22px;
+  left: -18px;
   top: 8px;
   width: 10px;
   height: 10px;
@@ -432,6 +433,7 @@ nav {
 }
 
 .linkedin img {
+  vertical-align: middle;
   opacity: 0.7;
   transition: 0.2s;
 }
