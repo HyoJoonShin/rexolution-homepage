@@ -1,7 +1,61 @@
+:root {
+  --main-red:#7A1E14;
+  --bg:#070707;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
 body {
-  background:#070707;
+  font-family:'Segoe UI', sans-serif;
+  background:var(--bg);
   color:white;
-  font-family:sans-serif;
+}
+
+/* AI Background */
+#ai-bg {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:0;
+  opacity:0.5;
+  pointer-events:none;
+}
+
+nav, section {
+  position:relative;
+  z-index:1;
+}
+
+/* NAV */
+nav {
+  position:fixed;
+  width:100%;
+  padding:20px 40px;
+  display:flex;
+  justify-content:space-between;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
+}
+
+.logo {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  cursor:pointer;
+}
+
+.logo img:first-child { height:28px; }
+.logo img:last-child { height:18px; }
+
+nav a {
+  color:#ddd;
+  margin-left:25px;
+  text-decoration:none;
+}
+nav a:hover {
+  color:var(--main-red);
 }
 
 /* HERO */
@@ -18,33 +72,64 @@ body {
   margin-bottom:20px;
 }
 
-.hero-desc {
-  font-size:20px;
+.hero p {
   color:#aaa;
+  font-size:20px;
+  line-height:1.6;
 }
 
 .highlight {
-  color:#7A1E14;
+  color:var(--main-red);
 }
 
-/* NAV */
-nav {
-  position:fixed;
-  width:100%;
-  padding:20px;
-  display:flex;
-  justify-content:space-between;
-}
-
-nav a {
-  margin-left:20px;
+/* BUTTON */
+.btn {
+  margin-top:30px;
+  display:inline-block;
+  padding:14px 28px;
+  background:var(--main-red);
+  border-radius:8px;
   color:white;
   text-decoration:none;
 }
 
-/* CARD */
+/* CONTENT */
+.content {
+  padding:140px 60px;
+  max-width:1100px;
+  margin:auto;
+}
+
 .card {
   background:#111;
   padding:30px;
-  margin:20px 0;
+  margin-bottom:20px;
+  border-radius:10px;
+}
+
+/* GRID */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+/* TIMELINE */
+.timeline {
+  border-left:2px solid var(--main-red);
+  padding-left:20px;
+}
+.timeline-item {
+  margin-bottom:20px;
+}
+.year {
+  color:var(--main-red);
+  font-weight:bold;
+}
+
+/* MOBILE */
+@media (max-width:768px){
+  .content { padding:100px 20px; }
+  .hero h1 { font-size:36px; }
+  nav div:last-child { display:none; }
 }
