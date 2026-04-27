@@ -27,54 +27,141 @@
   <section class="page-hero">
     <div class="page-hero-inner">
       <p class="eyebrow">AI inspection platform</p>
-      <h1>Solution</h1>
-      <p>
-        From first article to full production, Rexolution keeps inspection
-        fast, repeatable, and easy to scale across PCB assembly lines.
-      </p>
+      <h1>솔루션</h1>
     </div>
   </section>
 
   <section class="content">
-    <p class="section-copy">
-      The platform is built to shorten setup time, maintain stable quality,
-      and keep every inspection result traceable.
-    </p>
-
+    <h2 class="section-title">왜 REX인가</h2>
     <div class="card-grid">
       <article class="card">
-        <h3>Zero-Teaching Setup</h3>
+        <h3>티칭없이 즉시 검사</h3>
         <p>
-          Start inspection without long rule-based preparation or complex
-          manual teaching steps.
+            REX는 딥러닝 기반 검사 시스템으로 별도의 티칭 없이 소량 샘플부터 양산품까지 즉시 검사가 가능합니다.
+            이에 따라 숙련된 오퍼레이터 또한 필요하지 않습니다.
         </p>
       </article>
 
       <article class="card">
-        <h3>High-Speed Inference</h3>
+        <h3>대기없이 고속 검사</h3>
         <p>
-          GPU-based processing keeps board inspection fast enough for practical
-          line operation and quick decision making.
+            REX는 GPU 병렬 연산으로 불량을 동시에 검출합니다.
+            가로 300mm x 세로 225mm 사이즈 기판 기준, 약 20초 내에 고속 검사를 수행하여 검사 병목을 최소화합니다.
         </p>
       </article>
 
       <article class="card">
-        <h3>Automatic Defect Tuning</h3>
+        <h3>누락없이 데이터 저장</h3>
         <p>
-          AI models adapt inspection thresholds and defect recognition with far
-          less operator intervention.
+            REX는 모든 기판의 이미지를 자동 저장합니다. 
+            언제든지 검사 이력과 이미지를 조회할 수 있어 “누가“, “언제“, “어떤 기판을 검사했고“, “출하 당시 상태가 어떠했는지“ 객관적인 데이터로 관리 가능합니다.
         </p>
       </article>
 
       <article class="card">
-        <h3>Data History And Traceability</h3>
+        <h3>인력없이 자동 검사</h3>
         <p>
-          Inspection images and results stay organized so quality teams can
-          review, compare, and audit production history.
+            REX는 AI가 불량을 자동으로 판정하기 때문에 숙련된 육안 검사자 없이도 동일한 검사 품질을 유지할 수 있습니다. 
         </p>
       </article>
     </div>
   </section>
+  <section class="content-block">
+    <h2 class="section-title">기존 방식 대비 변화</h2>
+
+    <div class="card">
+        <table style="width:100%; border-collapse:collapse; text-align:left;">
+        <thead>
+            <tr style="border-bottom:1px solid var(--border);">
+            <th style="padding:12px;">구분</th>
+            <th style="padding:12px;">기존 방식</th>
+            <th style="padding:12px;">REX 적용</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+            <td style="padding:12px;">티칭</td>
+            <td style="padding:12px;">기판마다 2~3시간 티칭 필요</td>
+            <td style="padding:12px;">티칭 없이 즉시 검사</td>
+            </tr>
+
+            <tr>
+            <td style="padding:12px;">속도</td>
+            <td style="padding:12px;">긴 Tact Time으로 병목 발생</td>
+            <td style="padding:12px;">GPU 병렬 연산 고속 검사</td>
+            </tr>
+
+            <tr>
+            <td style="padding:12px;">기록</td>
+            <td style="padding:12px;">검사 기록 추적 어려움</td>
+            <td style="padding:12px;">이미지 및 이력 자동 저장</td>
+            </tr>
+
+            <tr>
+            <td style="padding:12px;">검사 방식</td>
+            <td style="padding:12px;">작업자 의존</td>
+            <td style="padding:12px;">AI 자동 판정</td>
+            </tr>
+
+        </tbody>
+        </table>
+    </div>
+    </section>
+    <section class="content-block">
+    <h2 class="section-title">제품 상세 스펙</h2>
+
+    <div class="card" style="display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center;">
+
+        <!-- 왼쪽: 표 -->
+        <table style="width:100%; border-collapse:collapse;">
+        <tbody>
+
+            <tr>
+            <td style="padding:10px; color:var(--text-soft);">Size</td>
+            <td style="padding:10px;">1200 x 1000 x 1850 mm</td>
+            </tr>
+
+            <tr>
+            <td style="padding:10px; color:var(--text-soft);">Board Size</td>
+            <td style="padding:10px;">
+                Option1: 300 x 225 mm<br>
+                Option2: 250 x 187.5 mm
+            </td>
+            </tr>
+
+            <tr>
+            <td style="padding:10px; color:var(--text-soft);">검사 항목</td>
+            <td style="padding:10px;">
+                THT: 미삽, 역삽, 오삽 등<br>
+                SMT: 맨하탄, 모로섬<br>
+                ETC: 솔더볼 등
+            </td>
+            </tr>
+
+            <tr>
+            <td style="padding:10px; color:var(--text-soft);">Tact Time</td>
+            <td style="padding:10px;">
+                약 20초 / 50초
+            </td>
+            </tr>
+
+            <tr>
+            <td style="padding:10px; color:var(--text-soft);">Weight</td>
+            <td style="padding:10px;">약 200kg</td>
+            </tr>
+
+        </tbody>
+        </table>
+
+        <!-- 오른쪽: 이미지 -->
+        <div>
+        <img src="images/machine.png" style="width:100%; border-radius:12px;">
+        </div>
+
+    </div>
+    </section>
 </main>
 
 <script src="bg.js"></script>
