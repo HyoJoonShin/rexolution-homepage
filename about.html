@@ -28,15 +28,17 @@
     <div class="page-hero-inner">
       <p class="eyebrow">Company</p>
       <h1>회사 소개</h1>
-      <p>
-        인공지능 기술과 비즈니스 역량을 겸비한 팀으로 비전 검사의 미래를 혁신하는 전문가 집단
-      </p>
+
     </div>
   </section>
 
   <section class="content">
     <div class="content-block">
       <h2 class="section-title">팀 소개</h2>
+      <p>
+        레졸루션은 PCB-A 외관 검사의 방식을 근본적으로 바꾸는 Vision AI 기업입니다.<br>
+        별도의 티칭 없이 즉시 적용 가능한 AI 기술로 검사 속도와 정확도를 동시에 개선하고, 더 빠르고 유연한 품질 관리를 실현합니다.
+      </p>
       <div class="grid team-grid">
         <article class="card team-card">
           <div class="team-card-media">
@@ -292,3 +294,25 @@
 <script src="bg.js"></script>
 </body>
 </html>
+
+<script>
+emailjs.init("DDwANV5nKbdEEBaYm");
+
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const status = document.getElementById("form-status");
+  status.innerText = "전송 중...";
+
+  emailjs.sendForm(
+    "service_2veom7r",
+    "template_zu6cym7",
+    this
+  ).then(() => {
+    status.innerText = "문의가 정상적으로 전송되었습니다.";
+    this.reset();
+  }).catch(() => {
+    status.innerText = "전송 실패. 다시 시도해주세요.";
+  });
+});
+</script>
