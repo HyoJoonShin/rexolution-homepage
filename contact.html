@@ -91,12 +91,21 @@
         <article class="card">
         <h3>오시는 길</h3>
 
-        <iframe 
-            src="https://naver.me/Gq8ywBa4"
-            width="100%" 
-            height="400" 
-            style="border:0; border-radius:10px;">
-        </iframe>
+        <div id="map" style="width:100%; height:400px;"></div>
+
+        <script src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=YOUR_CLIENT_ID"></script>
+
+        <script>
+          var map = new naver.maps.Map('map', {
+              center: new naver.maps.LatLng(37.456, 127.039), // 좌표 바꿔야 함
+              zoom: 17
+          });
+
+          var marker = new naver.maps.Marker({
+              position: new naver.maps.LatLng(37.456, 127.039),
+              map: map
+          });
+        </script>
 
         <!-- 정보 -->
         <div style="margin-top:20px; line-height:1.6;">
