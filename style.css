@@ -471,3 +471,38 @@ nav {
   grid-template-columns: 1fr; /* 위아래 배치 */
   gap: 20px;
 }
+
+.contact-form {
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.form-row {
+  display:flex;
+  gap:10px;
+}
+
+.form-row input {
+  flex:1;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background:#0e0e0e;
+  border:1px solid #333;
+  padding:12px;
+  color:white;
+  border-radius:6px;
+}
+
+.contact-form textarea {
+  height:140px;
+  resize:none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline:none;
+  border-color:var(--main-red);
+}
