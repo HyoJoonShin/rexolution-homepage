@@ -1,54 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solution | Rexolution</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
 <body>
 
 <canvas id="ai-bg"></canvas>
 
 <nav>
-  <div class="logo" onclick="location.href='index.html'">
-    <img src="images/logo.png">
-    <img src="images/text.png">
-  </div>
-  <div>
-    <a href="solution.html">Solution</a>
+  <a class="logo" href="index.html" aria-label="Rexolution home">
+    <img src="images/logo.png" alt="Rexolution logo">
+    <img src="images/text.png" alt="Rexolution">
+  </a>
+  <div class="nav-links">
+    <a href="solution.html" class="active" aria-current="page">Solution</a>
     <a href="about.html">About Us</a>
     <a href="contact.html">Contact</a>
   </div>
 </nav>
 
-<section class="content">
+<main>
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <p class="eyebrow">AI inspection platform</p>
+      <h1>Solution</h1>
+      <p>
+        From first article to full production, Rexolution keeps inspection
+        fast, repeatable, and easy to scale across PCB assembly lines.
+      </p>
+    </div>
+  </section>
 
-<h2>Solution</h2>
+  <section class="content">
+    <p class="section-copy">
+      The platform is built to shorten setup time, maintain stable quality,
+      and keep every inspection result traceable.
+    </p>
 
-<div class="card">
-<h3>티칭 없이 즉시 검사</h3>
-<p>
-REX는 딥러닝 기반 검사 시스템으로  
-소량 샘플부터 양산품까지 즉시 검사 가능합니다.
-</p>
-</div>
+    <div class="card-grid">
+      <article class="card">
+        <h3>Zero-Teaching Setup</h3>
+        <p>
+          Start inspection without long rule-based preparation or complex
+          manual teaching steps.
+        </p>
+      </article>
 
-<div class="card">
-<h3>고속 검사 (GPU 병렬 연산)</h3>
-<p>
-300x225mm 기준 약 20초 내 검사 수행으로  
-공정 병목을 최소화합니다.
-</p>
-</div>
+      <article class="card">
+        <h3>High-Speed Inference</h3>
+        <p>
+          GPU-based processing keeps board inspection fast enough for practical
+          line operation and quick decision making.
+        </p>
+      </article>
 
-<div class="card">
-<h3>AI 자동 판정</h3>
-<p>
-숙련된 검사자 없이도 동일한 품질 유지
-</p>
-</div>
+      <article class="card">
+        <h3>Automatic Defect Tuning</h3>
+        <p>
+          AI models adapt inspection thresholds and defect recognition with far
+          less operator intervention.
+        </p>
+      </article>
 
-<div class="card">
-<h3>데이터 저장 & 추적</h3>
-<p>
-모든 기판 이미지 자동 저장  
-검사 이력 기반 클레임 대응 가능
-</p>
-</div>
+      <article class="card">
+        <h3>Data History And Traceability</h3>
+        <p>
+          Inspection images and results stay organized so quality teams can
+          review, compare, and audit production history.
+        </p>
+      </article>
+    </div>
+  </section>
+</main>
 
-</section>
 <script src="bg.js"></script>
 </body>
+</html>

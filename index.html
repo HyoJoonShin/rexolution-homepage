@@ -2,6 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rexolution</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -11,32 +12,30 @@
 <canvas id="ai-bg"></canvas>
 
 <nav>
-  <div class="logo" onclick="location.href='index.html'">
-    <img src="images/logo.png">
-    <img src="images/text.png">
-  </div>
-  <div>
+  <a class="logo" href="index.html" aria-label="Rexolution home">
+    <img src="images/logo.png" alt="Rexolution logo">
+    <img src="images/text.png" alt="Rexolution">
+  </a>
+  <div class="nav-links">
     <a href="solution.html">Solution</a>
     <a href="about.html">About Us</a>
     <a href="contact.html">Contact</a>
   </div>
 </nav>
 
-<section class="hero">
-  <div>
-    <h1>Zero-Teaching Inspection</h1>
-
-    <p>
-      REX는 PCB Assembly 검사를 자동화 할 수 있는<br>
-      합리적인 가격의 AI 솔루션입니다.<br><br>
-      <span class="highlight">
-      티칭이 필요없는 즉시 검사로 생산성을 극대화하세요.
-      </span>
-    </p>
-
-    <a href="solution.html" class="btn">View Solution</a>
-  </div>
-</section>
+<main>
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">AI inspection for PCB assembly</p>
+      <h1>Zero-Teaching Inspection</h1>
+      <p>
+        Rexolution delivers a fast, practical AI inspection workflow for PCB
+        assembly with minimal setup and production-ready consistency.
+      </p>
+      <a href="solution.html" class="btn">View Solution</a>
+    </div>
+  </section>
+</main>
 
 <script src="bg.js"></script>
 </body>

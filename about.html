@@ -1,31 +1,79 @@
-<section class="content">
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Rexolution</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
-<h2>About Us</h2>
+<body>
 
-<h3>Team</h3>
-<div class="grid">
-  <div class="card">CEO</div>
-  <div class="card">CTO</div>
-</div>
+<canvas id="ai-bg"></canvas>
 
-<h3>History & Awards</h3>
-
-<div class="timeline">
-
-<div class="timeline-item">
-  <div class="year">2024</div>
-  <a href="https://www.antler.co/location/korea" target="_blank">
-    Antler 시드 투자 유치
+<nav>
+  <a class="logo" href="index.html" aria-label="Rexolution home">
+    <img src="images/logo.png" alt="Rexolution logo">
+    <img src="images/text.png" alt="Rexolution">
   </a>
-</div>
+  <div class="nav-links">
+    <a href="solution.html">Solution</a>
+    <a href="about.html" class="active" aria-current="page">About Us</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
 
-<div class="timeline-item">
-  <div class="year">2025</div>
-  <a href="https://startup.google.com/programs/accelerator/korea/" target="_blank">
-    Google for Startups Accelerator 선정
-  </a>
-</div>
+<main>
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <p class="eyebrow">Company</p>
+      <h1>About Us</h1>
+      <p>
+        Rexolution builds practical AI tools that help manufacturing teams
+        inspect faster, reduce setup burden, and improve production quality.
+      </p>
+    </div>
+  </section>
 
-</div>
+  <section class="content">
+    <div class="content-block">
+      <h2 class="section-title">Team</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>CEO</h3>
+          <p>Leads business direction, partnerships, and customer growth.</p>
+        </article>
 
-</section>
+        <article class="card">
+          <h3>CTO</h3>
+          <p>Owns product engineering and AI inspection system development.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="content-block">
+      <h2 class="section-title">History And Awards</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="year">2024</div>
+          <a href="https://www.antler.co/location/korea" target="_blank" rel="noreferrer">
+            Antler Korea Residency
+          </a>
+          <p>Selected for Antler's startup residency program in Korea.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="year">2025</div>
+          <a href="https://startup.google.com/programs/accelerator/korea/" target="_blank" rel="noreferrer">
+            Google for Startups Accelerator Korea
+          </a>
+          <p>Joined the accelerator program focused on startup growth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="bg.js"></script>
+</body>
+</html>
