@@ -132,11 +132,11 @@ nav {
 .hero {
   min-height: 100vh;
   padding-top: 120px;
-  padding-bottom: 60px;
+  padding-bottom: 80px;
 }
 
 .page-hero {
-  min-height: 320px;
+  min-height: 240px;
   padding-top: 70px;
   padding-bottom: 40px;
 }
