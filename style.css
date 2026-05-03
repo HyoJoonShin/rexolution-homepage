@@ -521,3 +521,21 @@ nav {
   outline:none;
   border-color:var(--main-red);
 }
+
+.site-footer {
+  margin-top: 80px;
+  padding: 20px 10px;
+  text-align: left;
+  font-size: 13px;
+  color: #888;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.site-footer a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #fff;
+}
