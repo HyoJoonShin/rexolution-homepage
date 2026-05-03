@@ -41,7 +41,7 @@
         <h3>문의하기</h3>
 
         <p style="margin-bottom:10px;">
-            제품 문의, 도입 상담 등 굼금하신 점을 자유롭게 남겨주세요.
+            제품 문의, 도입 상담 등 궁금하신 점을 자유롭게 남겨주세요.
         </p>
 
         <form id="contact-form" class="contact-form">
@@ -131,11 +131,13 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
     "template_zu6cym7",
     this
   ).then(() => {
-    status.innerText = "문의가 정상적으로 전송되었습니다.";
     this.reset();
+    status.innerText = "";
+    alert("문의가 정상적으로 전송되었습니다.");
   }).catch((err) => {
     console.error(err);
-    status.innerText = "전송 실패. 다시 시도해주세요.";
+    status.innerText = "";
+    alert("전송 실패. 다시 시도해주세요.");
   });
 });
 </script>
