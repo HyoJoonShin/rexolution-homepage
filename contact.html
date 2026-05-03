@@ -91,11 +91,14 @@
         <article class="card">
         <h3>오시는 길</h3>
 
-          <div id="map" style="width:100%; height:400px;"></div>
 
-          <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5ece0e2fc4eb3ea2672342b4882f16c1"></script>
+        <div id="map" style="width:100%; height:400px;"></div>
 
-          <script>
+        <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5ece0e2fc4eb3ea2672342b4882f16c1&autoload=false"></script>
+
+        <script>
+        kakao.maps.load(function () {
+
           var container = document.getElementById('map');
 
           var options = {
@@ -110,7 +113,9 @@
           });
 
           marker.setMap(map);
-          </script>
+
+        });
+        </script>
 
         <!-- 정보 -->
         <div style="margin-top:20px; line-height:1.6;">
