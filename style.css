@@ -224,12 +224,17 @@ nav {
   margin-top: 56px;
 }
 
-.card-grid,
 .grid,
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 20px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  /* 2칸 */
+  gap: 30px;
 }
 
 .card {
