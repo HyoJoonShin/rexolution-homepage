@@ -90,24 +90,28 @@
 </main>
 
 <script src="bg.js"></script>
-<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=5ece0e2fc4eb3ea2672342b4882f16c1&autoload=false"></script>
+<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=5ece0e2fc4eb3ea2672342b4882f16c1&autoload=false" onload="initMap()"></script>
 <script>
-kakao.maps.load(function () {
-  var container = document.getElementById('map');
+function initMap() {
+  kakao.maps.load(function () {
 
-  var options = {
+    const container = document.getElementById('map');
+
+    const options = {
       center: new kakao.maps.LatLng(37.462506,127.036929),
       level: 3
-  };
+    };
 
-  var map = new kakao.maps.Map(container, options);
+    const map = new kakao.maps.Map(container, options);
 
-  var marker = new kakao.maps.Marker({
-      position: new kakao.maps.LatLng(37.462506,127.036929)
+    const marker = new kakao.maps.Marker({
+      position: options.center
+    });
+
+    marker.setMap(map);
+
   });
-
-  marker.setMap(map);
-});
+}
 </script>
 <footer class="site-footer">
   <p>
