@@ -91,7 +91,7 @@
 
 <script src="bg.js"></script>
 <script>
-function initMap() {
+window.initMap = function () {
   kakao.maps.load(function () {
 
     const container = document.getElementById('map');
@@ -110,9 +110,11 @@ function initMap() {
     marker.setMap(map);
 
   });
-}
+};
 </script>
-<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=5ece0e2fc4eb3ea2672342b4882f16c1&autoload=false" onload="initMap()"></script>
+
+<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=네키&autoload=false"
+        onload="initMap()"></script>
 
 <footer class="site-footer">
   <p>
