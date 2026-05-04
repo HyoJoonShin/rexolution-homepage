@@ -271,7 +271,7 @@ nav {
 .card:hover {
   transform: translateY(-8px);   /* 살짝 위로 */
   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-  border-color: var(--accent);   /* 포인트 컬러 강조 */
+  border-color: var(--main-red);   /* 포인트 컬러 강조 */
 }
 
 @media (max-width: 768px) {
