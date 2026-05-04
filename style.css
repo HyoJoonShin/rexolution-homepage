@@ -489,6 +489,12 @@ nav {
   gap:40px;
 }
 
+@media (max-width: 768px) {
+  .history-awards {
+    grid-template-columns: 1fr;
+  }
+}
+
 .sub-title {
   margin-bottom:20px;
   font-size:20px;
