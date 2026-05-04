@@ -281,6 +281,17 @@ nav {
   }
 }
 
+.card.no-hover:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: rgba(255,255,255,0.05);
+  background: #111;
+}
+
+.card.no-hover:hover h3 {
+  color: inherit;
+}
+
 .card h3 {
   margin-bottom: 12px;
   font-size: 20px;
