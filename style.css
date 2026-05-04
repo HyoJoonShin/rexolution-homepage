@@ -600,3 +600,15 @@ nav {
 .site-footer {
   line-height: 1.6;
 }
+
+.video-wrap {
+  width: 60%;
+  aspect-ratio: 16 / 9;
+}
+
+/* 🔥 모바일 */
+@media (max-width: 768px) {
+  .video-wrap {
+    width: 100%;
+  }
+}
