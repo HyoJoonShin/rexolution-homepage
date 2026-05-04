@@ -237,6 +237,28 @@ nav {
   gap: 30px;
 }
 
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 22px;
+  }
+
+  .card h3 {
+    font-size: 18px;
+  }
+}
+
 .card {
   padding: 28px;
   border: 1px solid var(--border);
@@ -250,6 +272,13 @@ nav {
   transform: translateY(-8px);   /* 살짝 위로 */
   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
   border-color: var(--accent);   /* 포인트 컬러 강조 */
+}
+
+@media (max-width: 768px) {
+  .card:hover {
+    transform: none;
+    box-shadow: none;
+  }
 }
 
 .card h3 {
