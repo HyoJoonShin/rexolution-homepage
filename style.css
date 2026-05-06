@@ -609,6 +609,6 @@ nav {
 /* 🔥 모바일 */
 @media (max-width: 768px) {
   .video-wrap {
-    width: 100%;
+    width: 90%;
   }
 }
