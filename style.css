@@ -552,6 +552,7 @@ nav {
   padding:12px;
   color:white;
   border-radius:6px;
+  box-sizing: border-box;
 }
 
 .contact-form textarea {
@@ -610,5 +611,8 @@ nav {
 @media (max-width: 768px) {
   .video-wrap {
     width: 90%;
+  }
+  .form-row {
+    flex-direction: column;
   }
 }
