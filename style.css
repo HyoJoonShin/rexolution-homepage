@@ -716,6 +716,19 @@ nav {
   text-align: center;
 }
 
+.ai-tech2-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.ai-tech2-images img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  background: #111;
+}
+
 @media (max-width: 768px) {
   .ai-tech2-grid {
     grid-template-columns: 1fr;
