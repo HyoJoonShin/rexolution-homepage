@@ -695,3 +695,29 @@ nav {
     font-size: 20px;
   }
 }
+
+.ai-tech2-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.ai-tech2-column {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ai-tech2-label {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .ai-tech2-grid {
+    grid-template-columns: 1fr;
+  }
+}

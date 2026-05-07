@@ -89,8 +89,8 @@
         <div class="ai-vision-title-card">
         <h3>PCB-A에 특화된 AI 모델로 극성 구분</h3>
         <p>
-            일반적인 이미지 모델이 놓치기 쉬운 부품의 방향성과 극성 정보를
-            PCB-A 특화 학습을 통해 더 정확하게 구분합니다.
+            일반적인 이미지 AI 모델은 구분이 불가한 극성 정보를
+            REX는 PCB-A 특화 AI 모델을 통해 구분 가능합니다.
         </p>
         </div>
 
@@ -111,36 +111,44 @@
         <div class="ai-vision-title-card">
         <h3>부품의 기울기 및 카메라 화각 차이에 강인한 결함 검출</h3>
         <p>
-            촬영 각도나 부품 기울기가 달라도 동일 부품의 핵심 특징을 안정적으로 비교하여
+           부품 기울기나 화각이 달라도 동일 부품의 핵심 특징을 안정적으로 비교하여
             일관된 검출이 가능합니다.
         </p>
         </div>
 
-        <div class="ai-tech2-grid">
-        <div class="ai-pair-grid">
-            <div class="ai-pair-images">
-            <img src="images/tech2-1.png" alt="부품 원본 이미지 1">
-            <img src="images/tech2-2.png" alt="특징맵 1">
-            </div>
-
-            <div class="ai-pair-images">
-            <img src="images/tech2-3.png" alt="부품 원본 이미지 2">
-            <img src="images/tech2-4.png" alt="특징맵 2">
-            </div>
-        </div>
+    <div class="ai-tech2-grid">
+    <div class="ai-tech2-column">
+        <h4 class="ai-tech2-label">정상</h4>
 
         <div class="ai-pair-grid">
-            <div class="ai-pair-images">
-            <img src="images/tech2-5.png" alt="터미널 블록 원본 이미지 1">
-            <img src="images/tech2-6.png" alt="터미널 블록 특징맵 1">
-            </div>
+        <div class="ai-pair-images">
+            <img src="images/tech2-1.png" alt="정상 부품 원본 이미지 1">
+            <img src="images/tech2-2.png" alt="정상 특징맵 1">
+        </div>
 
-            <div class="ai-pair-images">
-            <img src="images/tech2-7.png" alt="터미널 블록 원본 이미지 2">
-            <img src="images/tech2-8.png" alt="터미널 블록 특징맵 2">
-            </div>
+        <div class="ai-pair-images">
+            <img src="images/tech2-5.png" alt="정상 터미널 블록 원본 이미지 1">
+            <img src="images/tech2-6.png" alt="정상 터미널 블록 특징맵 1">
         </div>
         </div>
+    </div>
+
+    <div class="ai-tech2-column">
+        <h4 class="ai-tech2-label">역삽</h4>
+
+        <div class="ai-pair-grid">
+        <div class="ai-pair-images">
+            <img src="images/tech2-3.png" alt="역삽 부품 원본 이미지 2">
+            <img src="images/tech2-4.png" alt="역삽 특징맵 2">
+        </div>
+
+        <div class="ai-pair-images">
+            <img src="images/tech2-7.png" alt="역삽 터미널 블록 원본 이미지 2">
+            <img src="images/tech2-8.png" alt="역삽 터미널 블록 특징맵 2">
+        </div>
+        </div>
+    </div>
+    </div>
     </div>
     </section>
 
