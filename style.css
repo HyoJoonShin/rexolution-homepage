@@ -261,18 +261,18 @@ nav {
 
 .card {
   padding: 28px;
-  border: 2px solid transparent;
+  border: 1px solid var(--border);
   border-radius: 20px;
   background: var(--panel);
   box-shadow: var(--shadow);
   backdrop-filter: blur(12px);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
 }
 
 .card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-8px);   /* 살짝 위로 */
   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-  border-color: var(--main-red);
+  border-color: var(--main-red);   /* 포인트 컬러 강조 */
+  border-width: 2px;
 }
 
 @media (max-width: 768px) {
