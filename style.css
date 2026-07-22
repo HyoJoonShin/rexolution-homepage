@@ -297,7 +297,7 @@ nav {
 }
 
 .team-emblem-kaist {
-  width: 194px;
+  width: 210px;
 }
 
 .team-emblem-snu {
@@ -338,8 +338,12 @@ nav {
 
 .partner-image {
   display: block;
-  width: min(100%, 760px);
+  width: min(100%, 900px);
   margin: 44px auto 0;
+}
+
+.nowrap {
+  white-space: nowrap;
 }
 
 .grid,
