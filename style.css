@@ -100,6 +100,7 @@ nav {
   position: relative;
   width: 106px;
   height: 26px;
+  margin-right: -14px;
   overflow: hidden;
   padding-bottom: 0;
 }
@@ -375,10 +376,20 @@ nav {
   line-height: 1.55;
 }
 
+.partner-panel {
+  width: min(100%, 980px);
+  margin: 44px auto 0;
+  padding: 24px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(8px);
+}
+
 .partner-image {
   display: block;
-  width: min(100%, 940px);
-  margin: 44px auto 0;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .nowrap {
@@ -863,6 +874,34 @@ nav {
 .ai-vision-title-card p {
   color: var(--text-soft);
   line-height: 1.7;
+}
+
+.defect-scope-list {
+  display: grid;
+  gap: 28px;
+}
+
+.defect-type-group p {
+  margin-bottom: 14px;
+  color: var(--text-soft);
+  line-height: 1.7;
+}
+
+.defect-type-group strong {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.defect-type-images {
+  display: grid;
+  gap: 12px;
+}
+
+.defect-type-images img {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+  background: #111;
 }
 
 .top-pair-grid,
