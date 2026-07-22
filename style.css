@@ -295,7 +295,7 @@ nav {
 .home-machine-stage img {
   position: absolute;
   left: 55%;
-  bottom: 8px;
+  bottom: 10%;
   z-index: 1;
   width: min(42vw, 520px);
   min-width: 360px;
