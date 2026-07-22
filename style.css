@@ -95,6 +95,19 @@ nav {
   transition: color 0.2s ease;
 }
 
+.nav-links .nav-youtube {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0;
+}
+
+.nav-youtube img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -106,6 +119,10 @@ nav {
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.2s ease;
+}
+
+.nav-links .nav-youtube::after {
+  display: none;
 }
 
 .nav-links a:hover,
@@ -544,7 +561,7 @@ nav {
 
   .leadership-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 10px;
   }
 
   .team-emblem {
