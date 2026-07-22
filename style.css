@@ -323,6 +323,9 @@ nav {
 
 .home-hero-actions .btn {
   margin-top: 0;
+  padding: 17px 34px;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .page-hero p {
@@ -349,16 +352,14 @@ nav {
 .about-overview-card::before {
   content: "";
   position: absolute;
-  top: -24%;
-  right: -18%;
+  top: -36%;
+  right: -22%;
   z-index: 0;
-  width: 76%;
-  height: 82%;
-  background:
-    radial-gradient(circle at 78% 18%, rgba(212, 90, 73, 0.28), transparent 36%),
-    linear-gradient(135deg, transparent 8%, rgba(122, 30, 20, 0.56) 28%, rgba(212, 90, 73, 0.2) 52%, transparent 76%);
-  filter: blur(24px);
-  transform: rotate(-18deg);
+  width: 88%;
+  height: 110%;
+  background: linear-gradient(135deg, rgba(122, 30, 20, 0.74), rgba(212, 90, 73, 0.18), transparent 72%);
+  filter: blur(22px);
+  transform: rotate(18deg);
   pointer-events: none;
 }
 
@@ -770,7 +771,8 @@ nav {
 
   .home-hero-actions .btn {
     flex: 1 1 140px;
-    padding: 11px 18px;
+    padding: 13px 20px;
+    font-size: 16px;
     text-align: center;
   }
 
