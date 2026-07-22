@@ -218,7 +218,7 @@ nav {
 
 .about-hero-image {
   justify-self: start;
-  width: min(100%, 320px);
+  width: min(100%, 350px);
 }
 
 .about-hero-image img {
@@ -288,20 +288,19 @@ nav {
   z-index: 0;
   align-self: center;
   justify-self: center;
-  width: 172px;
+  width: 188px;
   max-width: none;
-  max-height: 196px;
+  max-height: 214px;
   object-fit: contain;
-  opacity: 0.38;
   pointer-events: none;
 }
 
 .team-emblem-kaist {
-  width: 166px;
+  width: 182px;
 }
 
 .team-emblem-snu {
-  width: 177px;
+  width: 194px;
 }
 
 .leadership-grid {
@@ -532,8 +531,8 @@ nav {
   }
 
   .team-emblem {
-    width: 156px;
-    max-height: 172px;
+    width: 170px;
+    max-height: 188px;
     opacity: 0.32;
   }
 }
