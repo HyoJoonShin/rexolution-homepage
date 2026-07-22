@@ -325,7 +325,7 @@ nav {
 
 .leader-profile ul {
   display: grid;
-  gap: 8px;
+  gap: 6px;
   margin: 0;
   padding-left: 16px;
 }
@@ -334,6 +334,12 @@ nav {
   color: var(--text-soft);
   font-size: 18px;
   line-height: 1.55;
+}
+
+.partner-image {
+  display: block;
+  width: min(100%, 608px);
+  margin: 44px auto 0;
 }
 
 .grid,
