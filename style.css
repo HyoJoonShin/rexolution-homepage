@@ -226,7 +226,7 @@ nav {
 .home-hero-glow {
   position: absolute;
   right: -12vw;
-  top: 6vh;
+  top: 12vh;
   z-index: 0;
   width: 58vw;
   height: 80vh;
@@ -271,6 +271,20 @@ nav {
   line-height: 1.75;
 }
 
+.home-hero-lower {
+  position: absolute;
+  left: 0;
+  bottom: 24px;
+  z-index: 3;
+  max-width: 560px;
+}
+
+.home-hero-lower p {
+  color: var(--text-soft);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
 .home-machine-stage {
   position: relative;
   align-self: stretch;
@@ -280,7 +294,7 @@ nav {
 .home-machine-stage img {
   position: absolute;
   left: 50%;
-  bottom: -54px;
+  bottom: -112px;
   z-index: 1;
   width: min(42vw, 520px);
   min-width: 360px;
@@ -291,7 +305,7 @@ nav {
 .home-machine-halo {
   position: absolute;
   left: 50%;
-  top: 15%;
+  top: 24%;
   width: 420px;
   height: 420px;
   border-radius: 999px;
@@ -303,7 +317,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 80px;
+  margin-top: 18px;
 }
 
 .home-hero-actions .btn {
@@ -704,9 +718,21 @@ nav {
   }
 
   .home-machine-stage img {
-    bottom: -36px;
+    bottom: -58px;
     width: min(78vw, 390px);
     min-width: 260px;
+  }
+
+  .home-hero-lower {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    max-width: 100%;
+    margin-top: 18px;
+  }
+
+  .home-hero-lower p {
+    font-size: 15px;
   }
 
   .home-hero-actions {
