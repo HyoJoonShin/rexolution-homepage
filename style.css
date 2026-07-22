@@ -292,15 +292,25 @@ nav {
   min-height: 620px;
 }
 
-.home-machine-stage img {
+.home-machine {
   position: absolute;
-  left: 65%;
   bottom: 10%;
-  z-index: 1;
   width: min(42vw, 520px);
   min-width: 360px;
-  transform: translateX(-50%) rotate(5deg);
   filter: drop-shadow(0 36px 44px rgba(0, 0, 0, 0.52));
+}
+
+.home-machine-front {
+  left: 67%;
+  z-index: 2;
+  transform: translateX(-50%) rotate(5deg);
+}
+
+.home-machine-back {
+  left: 48%;
+  z-index: 1;
+  opacity: 0.96;
+  transform: translateX(-50%) rotate(-7deg);
 }
 
 .home-machine-halo {
@@ -745,10 +755,18 @@ nav {
     min-height: 420px;
   }
 
-  .home-machine-stage img {
+  .home-machine {
     bottom: -36px;
     width: min(78vw, 390px);
     min-width: 260px;
+  }
+
+  .home-machine-front {
+    left: 58%;
+  }
+
+  .home-machine-back {
+    left: 42%;
   }
 
   .home-hero-lower {
