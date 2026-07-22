@@ -371,6 +371,7 @@ nav {
   width: max-content;
   max-width: 100%;
   justify-self: center;
+  text-align: left;
 }
 
 .leader-profile h3 {
@@ -398,7 +399,7 @@ nav {
   margin: 44px auto 0;
   padding: 18px 22px;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(4px);
 }
 
