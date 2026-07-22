@@ -306,8 +306,8 @@ nav {
 
 .leadership-grid {
   display: grid;
-  grid-template-columns: minmax(180px, 1fr) 60px minmax(180px, 1fr) 60px minmax(180px, 1fr);
-  gap: 4px;
+  grid-template-columns: minmax(170px, 0.9fr) 52px minmax(300px, 1.45fr) 52px minmax(170px, 0.9fr);
+  gap: 2px;
   align-items: center;
 }
 
