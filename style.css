@@ -98,14 +98,20 @@ nav {
 .nav-links .nav-youtube {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 106px;
+  height: 26px;
+  overflow: hidden;
   padding-bottom: 0;
 }
 
 .nav-youtube img {
   display: block;
+  max-width: none;
   width: auto;
-  height: 30px;
+  height: 110px;
   object-fit: contain;
+  transform: translate(-57px, -40px);
 }
 
 .nav-links a::after {
@@ -265,6 +271,13 @@ nav {
 .btn:hover {
   transform: translateY(-1px);
   box-shadow: 0 18px 40px rgba(122, 30, 20, 0.35);
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
 }
 
 /* CONTENT */
