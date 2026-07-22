@@ -96,9 +96,8 @@ nav {
 }
 
 .nav-links .nav-youtube {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  position: relative;
   width: 106px;
   height: 26px;
   overflow: hidden;
@@ -107,11 +106,13 @@ nav {
 
 .nav-youtube img {
   display: block;
+  position: absolute;
+  left: -57px;
+  top: -40px;
   max-width: none;
   width: auto;
   height: 110px;
   object-fit: contain;
-  transform: translate(-57px, -40px);
 }
 
 .nav-links a::after {
