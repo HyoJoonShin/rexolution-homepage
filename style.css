@@ -310,8 +310,8 @@ nav {
   left: 34%;
   bottom: 16%;
   z-index: 1;
-  width: min(25vw, 312px);
-  min-width: 216px;
+  width: min(27.5vw, 343px);
+  min-width: 238px;
   opacity: 0.96;
   transform: translateX(-50%) rotate(-7deg);
 }
@@ -771,8 +771,8 @@ nav {
   .home-machine-back {
     left: 30%;
     bottom: -18px;
-    width: min(47vw, 234px);
-    min-width: 156px;
+    width: min(51.7vw, 257px);
+    min-width: 172px;
   }
 
   .home-hero-lower {
