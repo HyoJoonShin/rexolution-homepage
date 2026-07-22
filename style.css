@@ -365,11 +365,11 @@ nav {
 .about-overview-card::before {
   content: "";
   position: absolute;
-  top: -36%;
-  right: -22%;
+  top: -24%;
+  right: -12%;
   z-index: 0;
-  width: 88%;
-  height: 110%;
+  width: 62%;
+  height: 168%;
   background: linear-gradient(135deg, rgba(122, 30, 20, 0.74), rgba(212, 90, 73, 0.18), transparent 72%);
   filter: blur(22px);
   transform: rotate(18deg);
@@ -576,7 +576,7 @@ nav {
   left: -18%;
   top: -34%;
   z-index: 0;
-  width: 86%;
+  width: 118%;
   height: 130%;
   background: linear-gradient(135deg, rgba(122, 30, 20, 0.78), rgba(212, 90, 73, 0.18), transparent 70%);
   filter: blur(22px);
