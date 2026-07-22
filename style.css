@@ -202,9 +202,9 @@ nav {
 .home-hero {
   position: relative;
   justify-content: flex-start;
-  min-height: calc(100vh - 78px);
-  margin-top: 78px;
-  padding: 34px 24px;
+  min-height: 100vh;
+  margin-top: 0;
+  padding: 112px 24px 34px;
   overflow: hidden;
   text-align: left;
   background:
@@ -275,7 +275,7 @@ nav {
 .home-hero-lower {
   position: absolute;
   left: 0;
-  top: clamp(320px, 42vh, 390px);
+  top: clamp(390px, 52vh, 480px);
   z-index: 3;
   max-width: 560px;
 }
