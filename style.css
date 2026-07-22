@@ -318,7 +318,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 18px;
+  margin-top: 18px;
 }
 
 .home-hero-actions .btn {
