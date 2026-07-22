@@ -378,11 +378,29 @@ nav {
 }
 
 .about-hero-image {
+  position: relative;
   justify-self: start;
   width: min(100%, 350px);
 }
 
+.about-hero-image::before {
+  content: "";
+  position: absolute;
+  inset: -28px -34px -18px -24px;
+  z-index: -1;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 62% 38%, rgba(212, 90, 73, 0.3), transparent 58%),
+    linear-gradient(145deg, rgba(122, 30, 20, 0.45), transparent 66%);
+  filter: blur(18px);
+  transform: rotate(-10deg);
+  opacity: 0.86;
+  pointer-events: none;
+}
+
 .about-hero-image img {
+  position: relative;
+  z-index: 1;
   display: block;
   width: 100%;
   border-radius: 8px;
