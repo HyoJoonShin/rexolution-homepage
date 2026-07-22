@@ -561,16 +561,33 @@ nav {
 }
 
 .partner-panel {
+  position: relative;
+  overflow: hidden;
   width: min(100%, 980px);
   margin: 44px auto 0;
   padding: 18px 22px;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(4px);
+  background: transparent;
+}
+
+.partner-panel::before {
+  content: "";
+  position: absolute;
+  left: -18%;
+  top: -34%;
+  z-index: 0;
+  width: 86%;
+  height: 130%;
+  background: linear-gradient(135deg, rgba(122, 30, 20, 0.78), rgba(212, 90, 73, 0.18), transparent 70%);
+  filter: blur(22px);
+  transform: rotate(-18deg);
+  pointer-events: none;
 }
 
 .partner-image {
   display: block;
+  position: relative;
+  z-index: 1;
   width: 100%;
   margin: 0 auto;
 }
