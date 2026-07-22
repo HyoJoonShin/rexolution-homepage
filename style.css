@@ -103,8 +103,8 @@ nav {
 
 .nav-youtube img {
   display: block;
-  width: 120px;
-  height: 80px;
+  width: auto;
+  height: 30px;
   object-fit: contain;
 }
 
@@ -326,8 +326,10 @@ nav {
 
 .leadership-grid {
   display: grid;
-  grid-template-columns: minmax(240px, 1fr) 60px minmax(240px, 1fr) 60px minmax(240px, 1fr);
-  gap: 4px;
+  width: min(100%, 1120px);
+  margin: 0 auto;
+  grid-template-columns: minmax(220px, 1fr) 44px minmax(220px, 1fr) 44px minmax(220px, 1fr);
+  gap: 0;
   align-items: center;
 }
 
