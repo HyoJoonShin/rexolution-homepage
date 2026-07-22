@@ -98,9 +98,9 @@ nav {
 .nav-links .nav-youtube {
   display: block;
   position: relative;
-  width: 122px;
-  height: 28px;
-  margin-right: -10px;
+  width: 85px;
+  height: 20px;
+  margin-right: -6px;
   overflow: hidden;
   padding-bottom: 0;
 }
@@ -109,10 +109,10 @@ nav {
   display: block;
   position: absolute;
   left: 0;
-  top: -46px;
+  top: -32px;
   max-width: none;
   width: auto;
-  height: 120px;
+  height: 84px;
   object-fit: contain;
 }
 
