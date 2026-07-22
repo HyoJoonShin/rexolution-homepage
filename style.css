@@ -299,35 +299,15 @@ nav {
   transform: translateX(-50%);
 }
 
-.home-hero-bottom {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-}
-
 .home-hero-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
-  padding: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(14px);
+  margin-top: 80px;
 }
 
 .home-hero-actions .btn {
   margin-top: 0;
-  padding: 12px 24px;
-}
-
-.home-hero-actions .btn-secondary {
-  color: #111;
-  background: rgba(255, 255, 255, 0.86);
-  box-shadow: none;
 }
 
 .page-hero p {
@@ -732,8 +712,6 @@ nav {
   .home-hero-actions {
     width: min(100%, 360px);
     flex-wrap: wrap;
-    justify-content: center;
-    border-radius: 28px;
   }
 
   .home-hero-actions .btn {
