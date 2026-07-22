@@ -103,8 +103,8 @@ nav {
 
 .nav-youtube img {
   display: block;
-  width: 24px;
-  height: 24px;
+  width: 100px;
+  height: 30px;
   object-fit: contain;
 }
 
