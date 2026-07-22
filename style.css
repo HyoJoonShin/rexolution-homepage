@@ -202,8 +202,9 @@ nav {
 .home-hero {
   position: relative;
   justify-content: flex-start;
-  min-height: 100vh;
-  padding: 112px 24px 34px;
+  min-height: calc(100vh - 78px);
+  margin-top: 78px;
+  padding: 34px 24px;
   overflow: hidden;
   text-align: left;
   background:
@@ -226,7 +227,7 @@ nav {
 .home-hero-glow {
   position: absolute;
   right: -12vw;
-  top: 12vh;
+  top: 6vh;
   z-index: 0;
   width: 58vw;
   height: 80vh;
@@ -294,7 +295,7 @@ nav {
 .home-machine-stage img {
   position: absolute;
   left: 50%;
-  bottom: -112px;
+  bottom: -54px;
   z-index: 1;
   width: min(42vw, 520px);
   min-width: 360px;
@@ -305,7 +306,7 @@ nav {
 .home-machine-halo {
   position: absolute;
   left: 50%;
-  top: 24%;
+  top: 15%;
   width: 420px;
   height: 420px;
   border-radius: 999px;
@@ -718,7 +719,7 @@ nav {
   }
 
   .home-machine-stage img {
-    bottom: -58px;
+    bottom: -36px;
     width: min(78vw, 390px);
     min-width: 260px;
   }
