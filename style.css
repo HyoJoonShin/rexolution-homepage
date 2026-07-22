@@ -178,6 +178,48 @@ nav {
   font-size: 18px;
 }
 
+.about-page-hero-inner {
+  width: 100%;
+  max-width: 1120px;
+}
+
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.92fr);
+  gap: 44px;
+  align-items: center;
+  margin-top: 8px;
+  text-align: left;
+}
+
+.about-hero-copy {
+  display: grid;
+  gap: 18px;
+}
+
+.about-hero-copy p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.about-hero-copy strong {
+  color: var(--accent);
+}
+
+.about-hero-image {
+  justify-self: end;
+  width: min(100%, 320px);
+}
+
+.about-hero-image img {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
 .highlight {
   color: var(--accent);
 }
@@ -222,6 +264,66 @@ nav {
 
 .content-block + .content-block {
   margin-top: 56px;
+}
+
+.leadership-panel {
+  position: relative;
+  overflow: hidden;
+  min-height: 180px;
+  padding: 42px 36px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #050505;
+  box-shadow: var(--shadow);
+}
+
+.team-emblem {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  max-width: 290px;
+  max-height: 190px;
+  object-fit: contain;
+  opacity: 0.18;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.team-emblem-kaist {
+  left: 24px;
+}
+
+.team-emblem-snu {
+  right: 118px;
+}
+
+.leadership-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 34px;
+}
+
+.leader-profile h3 {
+  margin-bottom: 10px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.leader-profile ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 16px;
+}
+
+.leader-profile li {
+  color: #000;
+  font-size: 13px;
+  line-height: 1.55;
 }
 
 .grid,
@@ -386,6 +488,21 @@ nav {
     padding-bottom: 28px;
   }
 
+  .about-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    text-align: left;
+  }
+
+  .about-hero-copy p {
+    font-size: 15px;
+  }
+
+  .about-hero-image {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
   .content {
     margin-bottom: 72px;
     padding: 0 20px;
@@ -393,6 +510,30 @@ nav {
 
   .section-title {
     font-size: 28px;
+  }
+
+  .leadership-panel {
+    padding: 28px 22px;
+  }
+
+  .leadership-grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .team-emblem {
+    max-width: 220px;
+    opacity: 0.12;
+  }
+
+  .team-emblem-kaist {
+    left: -32px;
+    top: 28%;
+  }
+
+  .team-emblem-snu {
+    right: -36px;
+    top: 72%;
   }
 }
 
