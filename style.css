@@ -186,7 +186,7 @@ nav {
 .about-hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
-  gap: 12px;
+  gap: 4px;
   align-items: center;
   margin-top: 8px;
   text-align: left;
@@ -273,8 +273,6 @@ nav {
 }
 
 .leadership-panel {
-  position: relative;
-  overflow: hidden;
   min-height: 180px;
   padding: 42px 36px;
   border: 0;
@@ -284,31 +282,29 @@ nav {
 }
 
 .team-emblem {
-  position: absolute;
-  z-index: 0;
-  top: 50%;
-  max-width: 290px;
-  max-height: 190px;
+  align-self: center;
+  justify-self: center;
+  width: 132px;
+  max-width: 100%;
+  max-height: 150px;
   object-fit: contain;
-  opacity: 0.3;
-  transform: translateY(-50%);
+  opacity: 1;
   pointer-events: none;
 }
 
 .team-emblem-kaist {
-  left: -36px;
+  width: 128px;
 }
 
 .team-emblem-snu {
-  right: -92px;
+  width: 136px;
 }
 
 .leadership-grid {
-  position: relative;
-  z-index: 1;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 34px;
+  grid-template-columns: minmax(190px, 1fr) 140px minmax(190px, 1fr) 140px minmax(190px, 1fr);
+  gap: 18px;
+  align-items: center;
 }
 
 .leader-profile h3 {
@@ -523,22 +519,12 @@ nav {
 
   .leadership-grid {
     grid-template-columns: 1fr;
-    gap: 26px;
+    gap: 20px;
   }
 
   .team-emblem {
-    max-width: 220px;
-    opacity: 0.16;
-  }
-
-  .team-emblem-kaist {
-    left: -24px;
-    top: 28%;
-  }
-
-  .team-emblem-snu {
-    right: -64px;
-    top: 72%;
+    width: 120px;
+    max-height: 132px;
   }
 }
 
