@@ -186,7 +186,7 @@ nav {
 .about-hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 560px) minmax(260px, 320px);
-  gap: 12px;
+  gap: 24px;
   align-items: center;
   justify-content: center;
   margin-top: 8px;
