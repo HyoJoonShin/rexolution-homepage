@@ -203,6 +203,26 @@ nav {
   font-size: 18px;
 }
 
+.about-card-shell {
+  max-width: 1280px;
+  margin: 100px auto 100px;
+  padding: 0 0 60px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+}
+
+.about-card-shell .page-hero {
+  min-height: auto;
+  padding-top: 40px;
+}
+
+.about-card-shell .content {
+  margin-bottom: 0;
+}
+
 .about-page-hero-inner {
   width: 100%;
   max-width: 1120px;
@@ -379,11 +399,11 @@ nav {
 .partner-panel {
   width: min(100%, 980px);
   margin: 44px auto 0;
-  padding: 24px 28px;
-  border: 1px solid rgba(255, 255, 255, 0.24);
+  padding: 18px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.68);
+  backdrop-filter: blur(6px);
 }
 
 .partner-image {
@@ -556,6 +576,15 @@ nav {
     min-height: auto;
     padding-top: 140px;
     padding-bottom: 28px;
+  }
+
+  .about-card-shell {
+    margin: 120px 16px 72px;
+    padding-bottom: 36px;
+  }
+
+  .about-card-shell .page-hero {
+    padding-top: 32px;
   }
 
   .about-hero-grid {
