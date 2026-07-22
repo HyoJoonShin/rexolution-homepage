@@ -275,7 +275,7 @@ nav {
 .home-hero-lower {
   position: absolute;
   left: 0;
-  bottom: 24px;
+  top: clamp(320px, 42vh, 390px);
   z-index: 3;
   max-width: 560px;
 }
@@ -295,7 +295,7 @@ nav {
 .home-machine-stage img {
   position: absolute;
   left: 50%;
-  bottom: -54px;
+  bottom: 8px;
   z-index: 1;
   width: min(42vw, 520px);
   min-width: 360px;
@@ -306,7 +306,7 @@ nav {
 .home-machine-halo {
   position: absolute;
   left: 50%;
-  top: 15%;
+  top: 8%;
   width: 420px;
   height: 420px;
   border-radius: 999px;
@@ -727,6 +727,7 @@ nav {
   .home-hero-lower {
     position: relative;
     left: auto;
+    top: auto;
     bottom: auto;
     max-width: 100%;
     margin-top: 18px;
@@ -989,6 +990,10 @@ nav {
   font-size: 13px;
   color: #888;
   border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.home-page .site-footer {
+  margin-top: 0;
 }
 
 .site-footer a {
