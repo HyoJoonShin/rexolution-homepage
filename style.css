@@ -108,7 +108,7 @@ nav {
 .nav-youtube img {
   display: block;
   position: absolute;
-  left: -20px;
+  left: -4px;
   top: -40px;
   max-width: none;
   width: auto;
@@ -206,6 +206,16 @@ nav {
 .about-page-hero-inner {
   width: 100%;
   max-width: 1120px;
+}
+
+.about-overview-card {
+  margin-top: 8px;
+  padding: 24px 28px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
 }
 
 .about-hero-grid {
@@ -318,6 +328,13 @@ nav {
   transform: translateX(-50%);
 }
 
+.about-overview-card .leadership-panel {
+  width: 100%;
+  margin-left: 0;
+  padding: 36px 0 0;
+  transform: none;
+}
+
 .team-emblem {
   position: relative;
   z-index: 0;
@@ -380,10 +397,10 @@ nav {
   width: min(100%, 980px);
   margin: 44px auto 0;
   padding: 18px 22px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.68);
-  backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.42);
+  backdrop-filter: blur(4px);
 }
 
 .partner-image {
@@ -556,6 +573,10 @@ nav {
     min-height: auto;
     padding-top: 140px;
     padding-bottom: 28px;
+  }
+
+  .about-overview-card {
+    padding: 20px;
   }
 
   .about-hero-grid {
