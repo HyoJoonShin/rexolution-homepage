@@ -282,7 +282,7 @@ nav {
 
 .home-hero-lower p {
   color: var(--text-soft);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.75;
 }
 
@@ -752,7 +752,7 @@ nav {
   }
 
   .home-hero-lower p {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .home-hero-actions {
