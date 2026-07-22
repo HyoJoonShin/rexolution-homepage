@@ -185,8 +185,8 @@ nav {
 
 .about-hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.92fr);
-  gap: 24px;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
+  gap: 12px;
   align-items: center;
   margin-top: 8px;
   text-align: left;
@@ -211,10 +211,11 @@ nav {
 
 .about-hero-copy .ai-highlight {
   color: #7a1e14;
+  font-weight: 800;
 }
 
 .about-hero-image {
-  justify-self: end;
+  justify-self: start;
   width: min(100%, 320px);
 }
 
@@ -276,6 +277,9 @@ nav {
   overflow: hidden;
   min-height: 180px;
   padding: 42px 36px;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
   color: var(--text);
 }
 
@@ -286,17 +290,17 @@ nav {
   max-width: 290px;
   max-height: 190px;
   object-fit: contain;
-  opacity: 0.24;
+  opacity: 0.3;
   transform: translateY(-50%);
   pointer-events: none;
 }
 
 .team-emblem-kaist {
-  left: 0;
+  left: -36px;
 }
 
 .team-emblem-snu {
-  right: 0;
+  right: -92px;
 }
 
 .leadership-grid {
@@ -524,16 +528,16 @@ nav {
 
   .team-emblem {
     max-width: 220px;
-    opacity: 0.12;
+    opacity: 0.16;
   }
 
   .team-emblem-kaist {
-    left: 0;
+    left: -24px;
     top: 28%;
   }
 
   .team-emblem-snu {
-    right: 0;
+    right: -64px;
     top: 72%;
   }
 }
