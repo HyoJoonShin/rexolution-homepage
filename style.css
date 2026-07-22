@@ -899,13 +899,26 @@ nav {
 
 .defect-scope-list {
   display: grid;
-  gap: 28px;
+  gap: 24px;
+}
+
+.defect-type-group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.02);
 }
 
 .defect-type-group p {
-  margin-bottom: 14px;
-  color: var(--text-soft);
+  margin: 0;
+  color: var(--accent);
+  font-size: 18px;
+  font-weight: 700;
   line-height: 1.7;
+  text-align: left;
 }
 
 .defect-type-group strong {
