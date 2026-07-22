@@ -292,6 +292,7 @@ nav {
   max-width: none;
   max-height: 214px;
   object-fit: contain;
+  opacity: 0.38;
   pointer-events: none;
 }
 
