@@ -765,9 +765,38 @@ nav {
   aspect-ratio: 16 / 9;
 }
 
+.solution-video-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.video-switcher {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.video-switch-button {
+  margin-top: 0;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+.video-switch-button.active {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2), var(--shadow);
+}
+
 /* 🔥 모바일 */
 @media (max-width: 768px) {
   .video-wrap {
+    width: 90%;
+  }
+  .video-switcher {
     width: 90%;
   }
   .form-row {
