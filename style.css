@@ -317,6 +317,8 @@ nav {
 .leader-profile {
   position: relative;
   z-index: 1;
+  width: max-content;
+  max-width: 100%;
   justify-self: center;
 }
 
