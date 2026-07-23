@@ -1162,6 +1162,10 @@ nav {
     word-break: keep-all;
   }
 
+  .spec-mobile-break-label {
+    display: block;
+  }
+
   .product-compare-table {
     font-size: 14px;
   }
@@ -1186,6 +1190,13 @@ nav {
   .product-compare-table th:first-child,
   .product-compare-table td:first-child {
     line-height: 1.45;
+  }
+
+  .compare-product-image-rex15 {
+    width: 118% !important;
+    max-width: none !important;
+    margin-left: -9% !important;
+    margin-right: -9% !important;
   }
 
   .compare-video-row {
