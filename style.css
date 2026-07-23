@@ -802,19 +802,19 @@ nav {
 
   .home-machine {
     bottom: -30px;
-    width: min(66vw, 340px);
-    min-width: 230px;
+    width: min(58vw, 300px);
+    min-width: 205px;
   }
 
   .home-machine-front {
-    left: 66%;
+    left: 63%;
   }
 
   .home-machine-back {
-    left: 16%;
+    left: 20%;
     bottom: 0;
-    width: min(40vw, 215px);
-    min-width: 145px;
+    width: min(34vw, 185px);
+    min-width: 128px;
   }
 
   .home-hero-lower {
