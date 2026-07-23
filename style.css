@@ -796,24 +796,25 @@ nav {
   }
 
   .home-machine-stage {
+    width: 100%;
     min-height: 420px;
   }
 
   .home-machine {
-    bottom: -36px;
-    width: min(78vw, 390px);
-    min-width: 260px;
+    bottom: -30px;
+    width: min(66vw, 340px);
+    min-width: 230px;
   }
 
   .home-machine-front {
-    left: 58%;
+    left: 66%;
   }
 
   .home-machine-back {
-    left: 24%;
-    bottom: -18px;
-    width: min(51.7vw, 257px);
-    min-width: 172px;
+    left: 16%;
+    bottom: 0;
+    width: min(40vw, 215px);
+    min-width: 145px;
   }
 
   .home-hero-lower {
