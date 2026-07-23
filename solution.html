@@ -306,7 +306,7 @@
     </section>
 
     <section class="content">
-    <h2 class="section-title">rex1.5, rex1 비교</h2>
+    <h2 class="section-title">rex1.5·rex1 비교</h2>
 
     <div class="card">
         <table style="width:100%; border-collapse:collapse; text-align:left;">
@@ -359,6 +359,34 @@
             <td style="padding:12px;">약 250kg</td>
             </tr>
 
+            <tr>
+            <td style="padding:12px;">고객 실사용 영상</td>
+            <td style="padding:12px;">
+                <div style="position:relative; width:100%; aspect-ratio:16 / 9; overflow:hidden; border-radius:12px;">
+                    <iframe
+                        class="customer-video-frame"
+                        data-video-id="Uj6cpze-oW0"
+                        title="rex1.5 고객 실사용 영상"
+                        style="position:absolute; inset:0; width:100%; height:100%; border:0;"
+                        allow="autoplay; encrypted-media"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </td>
+            <td style="padding:12px;">
+                <div style="position:relative; width:100%; aspect-ratio:16 / 9; overflow:hidden; border-radius:12px;">
+                    <iframe
+                        class="customer-video-frame"
+                        data-video-id="BvHNCN7dsmY"
+                        title="rex1 고객 실사용 영상"
+                        style="position:absolute; inset:0; width:100%; height:100%; border:0;"
+                        allow="autoplay; encrypted-media"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </td>
+            </tr>
+
         </tbody>
         </table>
     </div>
@@ -379,6 +407,28 @@
       button.classList.add("active");
     });
   });
+
+  const customerVideoFrames = document.querySelectorAll(".customer-video-frame");
+  const startCustomerVideos = () => {
+    customerVideoFrames.forEach((frame) => {
+      if (!frame.src) {
+        frame.src = `https://www.youtube.com/embed/${frame.dataset.videoId}?${videoOptions}`;
+      }
+    });
+  };
+
+  if ("IntersectionObserver" in window && customerVideoFrames.length > 0) {
+    const customerVideoObserver = new IntersectionObserver((entries, observer) => {
+      if (entries.some((entry) => entry.isIntersecting)) {
+        startCustomerVideos();
+        observer.disconnect();
+      }
+    }, { threshold: 0.25 });
+
+    customerVideoObserver.observe(customerVideoFrames[0]);
+  } else {
+    startCustomerVideos();
+  }
 </script>
 <footer class="site-footer">
   <p>© 2026 (주)레졸루션 All rights reserved.</p>
