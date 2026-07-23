@@ -720,8 +720,9 @@ nav {
 /* MOBILE */
 @media (max-width: 768px) {
   nav {
-    padding: 18px 20px;
+    padding: 18px 14px;
     flex-wrap: wrap;
+    gap: 14px;
   }
 
   .logo img:first-child {
@@ -734,7 +735,24 @@ nav {
 
   .nav-links {
     width: 100%;
-    gap: 18px;
+    flex-wrap: nowrap;
+    gap: 13px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .nav-links .nav-youtube {
+    width: 56px;
+    height: 14px;
+    margin-right: -2px;
+  }
+
+  .nav-youtube img {
+    top: -21px;
+    height: 55px;
   }
 
   .hero h1,
@@ -749,22 +767,28 @@ nav {
 
   .home-hero {
     padding-top: 140px;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-bottom: 32px;
+    overflow: hidden;
   }
 
   .home-hero-inner {
+    width: 100%;
     min-height: 760px;
     grid-template-columns: 1fr;
     align-items: start;
+    justify-items: center;
   }
 
   .home-hero-copy {
+    width: min(100%, 360px);
     max-width: 100%;
     padding-top: 0;
   }
 
   .home-hero-copy h1 {
-    font-size: clamp(42px, 15vw, 62px);
+    font-size: clamp(40px, 13vw, 54px);
   }
 
   .home-hero-copy p:not(.eyebrow) {
@@ -782,11 +806,11 @@ nav {
   }
 
   .home-machine-front {
-    left: 65%;
+    left: 58%;
   }
 
   .home-machine-back {
-    left: 30%;
+    left: 24%;
     bottom: -18px;
     width: min(51.7vw, 257px);
     min-width: 172px;
