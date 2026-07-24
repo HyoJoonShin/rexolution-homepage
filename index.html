@@ -20,10 +20,17 @@
     <a class="nav-youtube" href="https://www.youtube.com/@Rexolution_KOR" target="_blank" rel="noopener noreferrer" aria-label="Rexolution YouTube">
       <img src="images/youtube.png" alt="">
     </a>
-    <a href="about.html">회사 소개</a>
-    <a href="solution.html">솔루션</a>
-    <a href="contact.html">문의하기</a>
-    <a href="map.html">오시는 길</a>
+    <a href="about.html" data-i18n="nav.about">회사 소개</a>
+    <a href="solution.html" data-i18n="nav.solution">솔루션</a>
+    <a href="contact.html" data-i18n="nav.contact">문의하기</a>
+    <a href="map.html" data-i18n="nav.map">오시는 길</a>
+    <div class="language-switcher">
+      <button class="language-current" type="button" aria-label="Language selector">KR</button>
+      <div class="language-menu">
+        <button type="button" data-lang-option="ko">KR</button>
+        <button type="button" data-lang-option="en">EN</button>
+      </div>
+    </div>
   </div>
 </nav>
 
@@ -31,24 +38,25 @@
   <section class="hero">
     <div class="hero-inner">
       <p class="eyebrow">Zero-Teaching Inspection</p>
-      <h1>REX가 만드는<br>PCB Assembly<br>검사 자동화</h1>
-      <p>
+      <h1 data-i18n-html="home.hero.title">REX가 만드는<br>PCB Assembly<br>검사 자동화</h1>
+      <p data-i18n-html="home.hero.copy">
         합리적인 가격의 AI 비전 검사기로 PCB Assembly 검사를 자동화하세요.<br>
         티칭이 필요없는 즉시 검사로 생산성을 극대화합니다.
       </p>
       <div class="hero-actions">
-        <a href="solution.html" class="btn">솔루션 보기</a>
-        <a href="files/catalog.jpg" class="btn" target="_blank" rel="noopener noreferrer">제품 소개서</a>
+        <a href="solution.html" class="btn" data-i18n="home.hero.solution">솔루션 보기</a>
+        <a href="files/catalog.jpg" class="btn" target="_blank" rel="noopener noreferrer" data-i18n="home.hero.catalog">제품 소개서</a>
       </div>
     </div>
   </section>
 </main>
 
 <script src="bg.js"></script>
+<script src="lang.js"></script>
 <footer class="site-footer">
-  <p>© 2026 (주)레졸루션 All rights reserved.</p>
+  <p data-i18n="footer.copyright">© 2026 (주)레졸루션 All rights reserved.</p>
   <p><a href="mailto:hkim@rexolution.ai">hkim@rexolution.ai</a></p>
-  <p>서울특별시 서초구 매헌로 16 하이브랜드 AI양재허브 1201호</p>
+  <p data-i18n="footer.address">서울특별시 서초구 매헌로 16 하이브랜드 AI양재허브 1201호</p>
 </footer>
 </body>
 </html>

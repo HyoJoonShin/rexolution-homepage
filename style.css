@@ -143,6 +143,65 @@ nav {
   transform: scaleX(1);
 }
 
+.language-switcher {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-bottom: 4px;
+}
+
+.language-current,
+.language-menu button {
+  color: #ddd;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+.language-current {
+  min-width: 28px;
+  padding: 0;
+  text-align: left;
+}
+
+.language-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 25;
+  min-width: 48px;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.86);
+  box-shadow: var(--shadow);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 8px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.language-switcher:hover .language-menu,
+.language-switcher:focus-within .language-menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+.language-menu button {
+  padding: 0;
+  text-align: left;
+}
+
+.language-menu button:hover,
+.language-menu button.active {
+  color: #fff;
+}
+
 /* HERO */
 .hero,
 .page-hero {
@@ -736,11 +795,16 @@ nav {
   .nav-links {
     width: 100%;
     flex-wrap: nowrap;
-    gap: 13px;
+    gap: 11px;
   }
 
   .nav-links a {
-    font-size: 14px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .language-switcher {
+    font-size: 13px;
     white-space: nowrap;
   }
 

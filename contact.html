@@ -20,10 +20,17 @@
     <a class="nav-youtube" href="https://www.youtube.com/@Rexolution_KOR" target="_blank" rel="noopener noreferrer" aria-label="Rexolution YouTube">
       <img src="images/youtube.png" alt="">
     </a>
-    <a href="about.html">회사 소개</a>
-    <a href="solution.html">솔루션</a>
-    <a href="contact.html" class="active" aria-current="page">문의하기</a>
-    <a href="map.html">오시는 길</a>
+    <a href="about.html" data-i18n="nav.about">회사 소개</a>
+    <a href="solution.html" data-i18n="nav.solution">솔루션</a>
+    <a href="contact.html" class="active" aria-current="page" data-i18n="nav.contact">문의하기</a>
+    <a href="map.html" data-i18n="nav.map">오시는 길</a>
+    <div class="language-switcher">
+      <button class="language-current" type="button" aria-label="Language selector">KR</button>
+      <div class="language-menu">
+        <button type="button" data-lang-option="ko">KR</button>
+        <button type="button" data-lang-option="en">EN</button>
+      </div>
+    </div>
   </div>
 </nav>
 
@@ -31,7 +38,7 @@
   <section class="page-hero">
     <div class="page-hero-inner">
       <p class="eyebrow">Let's connect</p>
-      <h1>문의하기</h1>
+      <h1 data-i18n="contact.title">문의하기</h1>
     </div>
   </section>
 
@@ -41,7 +48,7 @@
 
         <!-- 문의하기 -->
         <article class="card no-hover">
-        <p style="margin-bottom:10px; font-size: 20px;">
+        <p style="margin-bottom:10px; font-size: 20px;" data-i18n="contact.intro">
             제품 문의, 도입 상담 등 궁금하신 점을 자유롭게 남겨주세요.
         </p>
 
@@ -49,21 +56,21 @@
 
             <!-- 성 / 이름 -->
             <div class="form-row">
-            <input type="text" name="last_name" placeholder="성" required>
-            <input type="text" name="first_name" placeholder="이름" required>
+            <input type="text" name="last_name" placeholder="성" data-i18n-placeholder="contact.placeholder.lastName" required>
+            <input type="text" name="first_name" placeholder="이름" data-i18n-placeholder="contact.placeholder.firstName" required>
             </div>
 
             <!-- 회사 -->
-            <input type="text" name="company" placeholder="회사명">
+            <input type="text" name="company" placeholder="회사명" data-i18n-placeholder="contact.placeholder.company">
 
             <!-- 부서 / 직책 -->
             <div class="form-row">
-            <input type="text" name="department" placeholder="부서">
-            <input type="text" name="position" placeholder="직책 / 직급">
+            <input type="text" name="department" placeholder="부서" data-i18n-placeholder="contact.placeholder.department">
+            <input type="text" name="position" placeholder="직책 / 직급" data-i18n-placeholder="contact.placeholder.position">
             </div>
 
             <!-- 이메일 -->
-            <input type="email" name="user_email" placeholder="이메일" required>
+            <input type="email" name="user_email" placeholder="이메일" data-i18n-placeholder="contact.placeholder.email" required>
 
             <!-- 휴대전화 -->
             <input
@@ -74,13 +81,15 @@
               autocomplete="tel"
               maxlength="13"
               placeholder="연락처 000-0000-0000"
+              data-i18n-placeholder="contact.placeholder.phone"
               pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
-              title="연락처 000-0000-0000 형식으로 입력해주세요">
+              title="연락처 000-0000-0000 형식으로 입력해주세요"
+              data-i18n-title="contact.placeholder.phoneTitle">
 
             <!-- 문의 내용 -->
-            <textarea name="message" placeholder="문의 내용을 입력해주세요" required></textarea>
+            <textarea name="message" placeholder="문의 내용을 입력해주세요" data-i18n-placeholder="contact.placeholder.message" required></textarea>
 
-            <button type="submit" class="btn contact-submit">문의 보내기</button>
+            <button type="submit" class="btn contact-submit" data-i18n="contact.submit">문의 보내기</button>
 
         </form>
 
@@ -93,6 +102,7 @@
 </main>
 
 <script src="bg.js"></script>
+<script src="lang.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
@@ -125,7 +135,7 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
   e.preventDefault();
 
   const status = document.getElementById("form-status");
-  status.innerText = "전송 중...";
+  status.innerText = window.getLangText ? window.getLangText("contact.status.sending", "전송 중...") : "전송 중...";
 
   emailjs.sendForm(
     "service_2veom7r",
@@ -134,18 +144,18 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
   ).then(() => {
     this.reset();
     status.innerText = "";
-    alert("문의가 정상적으로 전송되었습니다.");
+    alert(window.getLangText ? window.getLangText("contact.alert.success", "문의가 정상적으로 전송되었습니다.") : "문의가 정상적으로 전송되었습니다.");
   }).catch((err) => {
     console.error(err);
     status.innerText = "";
-    alert("전송 실패. 다시 시도해주세요.");
+    alert(window.getLangText ? window.getLangText("contact.alert.fail", "전송 실패. 다시 시도해주세요.") : "전송 실패. 다시 시도해주세요.");
   });
 });
 </script>
 <footer class="site-footer">
-  <p>© 2026 (주)레졸루션 All rights reserved.</p>
+  <p data-i18n="footer.copyright">© 2026 (주)레졸루션 All rights reserved.</p>
   <p><a href="mailto:hkim@rexolution.ai">hkim@rexolution.ai</a></p>
-  <p>서울특별시 서초구 매헌로 16 하이브랜드 AI양재허브 1201호</p>
+  <p data-i18n="footer.address">서울특별시 서초구 매헌로 16 하이브랜드 AI양재허브 1201호</p>
 </footer>
 </body>
 </html>

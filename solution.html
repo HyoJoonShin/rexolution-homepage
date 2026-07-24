@@ -20,10 +20,17 @@
     <a class="nav-youtube" href="https://www.youtube.com/@Rexolution_KOR" target="_blank" rel="noopener noreferrer" aria-label="Rexolution YouTube">
       <img src="images/youtube.png" alt="">
     </a>
-    <a href="about.html">회사 소개</a>
-    <a href="solution.html" class="active" aria-current="page">솔루션</a>
-    <a href="contact.html">문의하기</a>
-    <a href="map.html">오시는 길</a>
+    <a href="about.html" data-i18n="nav.about">회사 소개</a>
+    <a href="solution.html" class="active" aria-current="page" data-i18n="nav.solution">솔루션</a>
+    <a href="contact.html" data-i18n="nav.contact">문의하기</a>
+    <a href="map.html" data-i18n="nav.map">오시는 길</a>
+    <div class="language-switcher">
+      <button class="language-current" type="button" aria-label="Language selector">KR</button>
+      <div class="language-menu">
+        <button type="button" data-lang-option="ko">KR</button>
+        <button type="button" data-lang-option="en">EN</button>
+      </div>
+    </div>
   </div>
 </nav>
 
@@ -31,7 +38,7 @@
   <section class="page-hero">
     <div class="page-hero-inner">
       <p class="eyebrow">AI inspection for PCB assembly</p>
-      <h1>솔루션</h1>
+      <h1 data-i18n="solution.title">솔루션</h1>
     </div>
   </section>
 
@@ -48,35 +55,35 @@
         </div>
 
         <div class="video-switcher" aria-label="솔루션 영상 선택" style="margin-bottom:15px;">
-            <button class="btn video-switch-button" type="button" data-video-id="8-UxiYhHz54">마스터 등록</button>
-            <button class="btn video-switch-button" type="button" data-video-id="ExmWvD8rnFg">THT 검사</button>
-            <button class="btn video-switch-button" type="button" data-video-id="g-Qa_spuK4M">SMD 검사</button>
-            <button class="btn video-switch-button" type="button" data-video-id="6l5QkpCM1vA">솔더 검사</button>
+            <button class="btn video-switch-button" type="button" data-video-id="8-UxiYhHz54" data-i18n="solution.video.master">마스터 등록</button>
+            <button class="btn video-switch-button" type="button" data-video-id="ExmWvD8rnFg" data-i18n="solution.video.tht">THT 검사</button>
+            <button class="btn video-switch-button" type="button" data-video-id="g-Qa_spuK4M" data-i18n="solution.video.smd">SMD 검사</button>
+            <button class="btn video-switch-button" type="button" data-video-id="6l5QkpCM1vA" data-i18n="solution.video.solder">솔더 검사</button>
         </div>
 
     </div>
   <section class="content">
-    <h2 class="section-title">REX가 만드는 검사 혁신</h2>
+    <h2 class="section-title" data-i18n="solution.innovation.title">REX가 만드는 검사 혁신</h2>
     <div class="card-grid">
       <article class="card">
-        <h3>티칭없이 즉시 검사</h3>
-        <p>
+        <h3 data-i18n="solution.innovation.1.title">티칭없이 즉시 검사</h3>
+        <p data-i18n-html="solution.innovation.1.copy">
             딥러닝 기반 검사 시스템으로 별도의 티칭 없이 소량 샘플부터 양산품까지 즉시 검사가 가능합니다.<br>
             이에 따라 숙련된 오퍼레이터 또한 필요하지 않습니다.
         </p>
       </article>
 
       <article class="card">
-        <h3>대기없이 고속 검사</h3>
-        <p>
+        <h3 data-i18n="solution.innovation.2.title">대기없이 고속 검사</h3>
+        <p data-i18n-html="solution.innovation.2.copy">
             GPU 병렬 연산으로 불량을 동시에 검출합니다.<br>
             가로 300mm x 세로 225mm 사이즈 기판 기준, 약 20초 내에 고속 검사를 수행하여 검사 병목을 최소화합니다.
         </p>
       </article>
 
       <article class="card">
-        <h3>누락없이 데이터 저장</h3>
-        <p>
+        <h3 data-i18n="solution.innovation.3.title">누락없이 데이터 저장</h3>
+        <p data-i18n-html="solution.innovation.3.copy">
             모든 기판의 이미지를 자동 저장합니다. <br>
             언제든지 검사 이력과 이미지를 조회할 수 있어 “누가“, “언제“,<br>
             “어떤 기판을 검사했고“, “출하 당시 상태가 어떠했는지“<br>
@@ -85,8 +92,8 @@
       </article>
 
       <article class="card">
-        <h3>인력없이 자동 검사</h3>
-        <p>
+        <h3 data-i18n="solution.innovation.4.title">인력없이 자동 검사</h3>
+        <p data-i18n="solution.innovation.4.copy">
             AI가 불량을 자동으로 판정하기 때문에 숙련된 육안 검사자 없이도 동일한 검사 품질을 유지할 수 있습니다.
         </p>
       </article>
@@ -94,12 +101,12 @@
   </section>
 
     <section class="content">
-    <h2 class="section-title">REX 비전 AI</h2>
+    <h2 class="section-title" data-i18n="solution.ai.title">REX 비전 AI</h2>
 
     <div class="ai-vision-card">
         <div class="ai-vision-title-card">
-        <h3>PCB-A에 특화된 AI 모델로 극성 구분</h3>
-        <p>
+        <h3 data-i18n="solution.ai.polarity.title">PCB-A에 특화된 AI 모델로 극성 구분</h3>
+        <p data-i18n="solution.ai.polarity.copy">
             일반적인 이미지 AI 모델은 구분이 불가한 극성 정보를
             REX는 PCB-A 특화 AI 모델을 통해 구분 가능합니다.
         </p>
@@ -120,8 +127,8 @@
 
     <div class="ai-vision-card">
         <div class="ai-vision-title-card">
-        <h3>부품의 기울기 및 카메라 화각 차이에도 강인한 결함 검출</h3>
-        <p>
+        <h3 data-i18n="solution.ai.robust.title">부품의 기울기 및 카메라 화각 차이에도 강인한 결함 검출</h3>
+        <p data-i18n="solution.ai.robust.copy">
            부품 기울기나 화각이 달라도 동일 부품의 핵심 특징을 안정적으로 비교하여
             일관된 검출이 가능합니다.
         </p>
@@ -129,7 +136,7 @@
 
         <div class="ai-tech2-grid">
         <div class="ai-tech2-column">
-            <h4 class="ai-tech2-label">정상</h4>
+            <h4 class="ai-tech2-label" data-i18n="solution.ai.normal">정상</h4>
             <div class="ai-tech2-images">
             <img src="images/tech2-1.png" alt="정상 부품 원본 이미지 1">
             <img src="images/tech2-2.png" alt="정상 특징맵 1">
@@ -139,7 +146,7 @@
         </div>
 
         <div class="ai-tech2-column">
-            <h4 class="ai-tech2-label">역삽</h4>
+            <h4 class="ai-tech2-label" data-i18n="solution.ai.reverse">역삽</h4>
             <div class="ai-tech2-images">
             <img src="images/tech2-3.png" alt="역삽 부품 원본 이미지 2">
             <img src="images/tech2-4.png" alt="역삽 특징맵 2">
@@ -152,12 +159,12 @@
 
         <div class="ai-vision-card defect-scope-card">
         <div class="ai-vision-title-card defect-scope-title-card">
-        <h3>검출 범위</h3>
+        <h3 data-i18n="solution.defect.title">검출 범위</h3>
         </div>
 
         <div class="defect-scope-list">
         <div class="defect-type-group">
-            <p><strong>THT</strong> <strong>- 미삽 · 오삽 · 역삽 · 쇼트 · 미납 · 소납 · 과납 · 핀홀 · 냉땜 · 납뿔</strong></p>
+            <p data-i18n-html="solution.defect.tht"><strong>THT</strong> <strong>- 미삽 · 오삽 · 역삽 · 쇼트 · 미납 · 소납 · 과납 · 핀홀 · 냉땜 · 납뿔</strong></p>
             <div class="defect-type-images">
             <img src="images/defect_type1.png" alt="THT 결함 검출 범위 1">
             <img src="images/defect_type2.png" alt="THT 결함 검출 범위 2">
@@ -165,14 +172,14 @@
         </div>
 
         <div class="defect-type-group">
-            <p><strong>SMD - 미삽 · 부품파손 (SMD 칩저항&amp;MLCC)</strong></p>
+            <p data-i18n-html="solution.defect.smd"><strong>SMD - 미삽 · 부품파손 (SMD 칩저항&amp;MLCC)</strong></p>
             <div class="defect-type-images">
             <img src="images/defect_type3.png" alt="SMD 결함 검출 범위">
             </div>
         </div>
 
         <div class="defect-type-group">
-            <p><strong>그 외</strong> <strong>- 솔더볼 · 솔더찌꺼기</strong></p>
+            <p data-i18n-html="solution.defect.etc"><strong>그 외</strong> <strong>- 솔더볼 · 솔더찌꺼기</strong></p>
             <div class="defect-type-images">
             <img src="images/defect_type4.png" alt="그 외 결함 검출 범위">
             </div>
@@ -183,7 +190,7 @@
     </section>
 
   <section class="content">
-    <h2 class="section-title">기존 검사 장비 vs REX</h2>
+    <h2 class="section-title" data-i18n="solution.compare.old.title">기존 검사 장비 vs REX</h2>
 
     <div class="card">
         <table style="width:100%; border-collapse:collapse; text-align:left; table-layout:fixed;">
@@ -194,35 +201,35 @@
         </colgroup>
         <thead>
             <tr style="border-bottom:1px solid var(--border);">
-            <th style="padding:12px;">구분</th>
-            <th style="padding:12px;">기존 장비</th>
+            <th style="padding:12px;" data-i18n="table.category">구분</th>
+            <th style="padding:12px;" data-i18n="solution.compare.old.legacy">기존 장비</th>
             <th style="padding:12px;">REX</th>
             </tr>
         </thead>
 
         <tbody>
             <tr>
-            <td style="padding:12px;">티칭</td>
-            <td style="padding:12px;">기판마다 2~3시간 티칭 필요</td>
-            <td style="padding:12px;">티칭 없이 즉시 검사</td>
+            <td style="padding:12px;" data-i18n="solution.compare.old.teaching">티칭</td>
+            <td style="padding:12px;" data-i18n="solution.compare.old.teaching.legacy">기판마다 2~3시간 티칭 필요</td>
+            <td style="padding:12px;" data-i18n="solution.compare.old.teaching.rex">티칭 없이 즉시 검사</td>
             </tr>
 
             <tr>
-            <td style="padding:12px;">속도</td>
-            <td style="padding:12px;">긴 Tact Time으로 병목 발생</td>
-            <td style="padding:12px;">GPU 병렬 연산 고속 검사</td>
+            <td style="padding:12px;" data-i18n="solution.compare.old.speed">속도</td>
+            <td style="padding:12px;" data-i18n="solution.compare.old.speed.legacy">긴 Tact Time으로 병목 발생</td>
+            <td style="padding:12px;" data-i18n="solution.compare.old.speed.rex">GPU 병렬 연산 고속 검사</td>
             </tr>
 
             <tr>
-            <td style="padding:12px;">기록</td>
-            <td style="padding:12px;">검사 기록 추적 어려움</td>
-            <td style="padding:12px;">이미지 및 이력 자동 저장</td>
+            <td style="padding:12px;" data-i18n="solution.compare.old.record">기록</td>
+            <td style="padding:12px;" data-i18n="solution.compare.old.record.legacy">검사 기록 추적 어려움</td>
+            <td style="padding:12px;" data-i18n="solution.compare.old.record.rex">이미지 및 이력 자동 저장</td>
             </tr>
 
             <tr>
-            <td style="padding:12px;">검사 방식</td>
-            <td style="padding:12px;">작업자 의존</td>
-            <td style="padding:12px;">AI 자동 판정</td>
+            <td style="padding:12px;" data-i18n="solution.compare.old.method">검사 방식</td>
+            <td style="padding:12px;" data-i18n="solution.compare.old.method.legacy">작업자 의존</td>
+            <td style="padding:12px;" data-i18n="solution.compare.old.method.rex">AI 자동 판정</td>
             </tr>
 
         </tbody>
@@ -231,7 +238,7 @@
     </section>
 
     <section class="content">
-    <h2 class="section-title">제품 공통 스펙</h2>
+    <h2 class="section-title" data-i18n="solution.spec.title">제품 공통 스펙</h2>
 
         <div class="card">
 
@@ -251,24 +258,24 @@
                         <tr>
                             <td style="padding:10px; color:var(--text-soft);">Board Size</td>
                             <td style="padding:10px;">
-                                최대 300 x 225mm
+                                <span data-i18n="solution.spec.board.value">최대 300 x 225mm</span>
                             </td>
                         </tr>
 
                         <tr>
-                            <td style="padding:10px; color:var(--text-soft);">검사 항목</td>
+                            <td style="padding:10px; color:var(--text-soft);" data-i18n="solution.spec.items">검사 항목</td>
                             <td style="padding:10px;">
-                                <span class="nowrap">[THT] 미삽, 역삽, 오삽, 미납, 소납, 냉땜, 핀홀, 쇼트, 납뿔</span><br>
-                                [SMD] 미삽, 부품 파손(SMD 칩저항, MLCC)<br>
-                                [ETC] 솔더볼, 솔더찌꺼기
+                                <span class="nowrap" data-i18n="solution.spec.items.tht">[THT] 미삽, 역삽, 오삽, 미납, 소납, 냉땜, 핀홀, 쇼트, 납뿔</span><br>
+                                <span data-i18n="solution.spec.items.smd">[SMD] 미삽, 부품 파손(SMD 칩저항, MLCC)</span><br>
+                                <span data-i18n="solution.spec.items.etc">[ETC] 솔더볼, 솔더찌꺼기</span>
                             </td>
                         </tr>
 
                         <tr>
                             <td style="padding:10px; color:var(--text-soft);">Tact Time*</td>
                             <td style="padding:10px;">
-                                [Option1] 약 20초<br>
-                                [Option2] 약 50초
+                                <span data-i18n="solution.spec.tact.1">[Option1] 약 20초</span><br>
+                                <span data-i18n="solution.spec.tact.2">[Option2] 약 50초</span>
                             </td>
                         </tr>
 
@@ -302,7 +309,7 @@
 
                 <!-- 주석 -->
                 <p class="spec-note" style="margin-top:10px; font-size:13px; color:#888; line-height:1.5;">
-                    <span class="nowrap">* Board Size 300 x 225 mm 기준 값임 장비 설치 장소 및 네트워크 환경에 따라 차이 발생 가능함.</span>
+                    <span class="nowrap" data-i18n="solution.spec.note">* Board Size 300 x 225 mm 기준 값임 장비 설치 장소 및 네트워크 환경에 따라 차이 발생 가능함.</span>
                 </p>
 
             </div>
@@ -311,7 +318,7 @@
     </section>
 
     <section class="content">
-    <h2 class="section-title">REX1.5 · REX1 비교</h2>
+    <h2 class="section-title" data-i18n="solution.compare.product.title">REX1.5 · REX1 비교</h2>
 
     <div class="card">
         <table class="product-compare-table" style="width:100%; border-collapse:collapse; text-align:left; table-layout:fixed;">
@@ -322,7 +329,7 @@
         </colgroup>
         <thead>
             <tr style="border-bottom:1px solid var(--border);">
-            <th style="padding:12px; vertical-align:bottom;">구분</th>
+            <th style="padding:12px; vertical-align:bottom;" data-i18n="table.category">구분</th>
             <th style="padding:12px; text-align:center; vertical-align:bottom;">
                 <div style="transform:translateX(-28px);">
                     <img class="compare-product-image compare-product-image-rex15" src="images/rex1.5.png" alt="rex1.5" style="display:block; width:100%; max-width:260px; margin:0 auto 12px;">
@@ -340,37 +347,37 @@
 
         <tbody>
             <tr>
-            <td style="padding:12px;">기판 앞/뒤 전환</td>
-            <td style="padding:12px;"><span style="text-decoration-line:underline; text-decoration-color:rgba(212, 90, 73, 0.95); text-decoration-thickness:2px; text-underline-offset:5px; filter:drop-shadow(0 0 6px rgba(212, 90, 73, 0.75));">자동</span></td>
-            <td style="padding:12px;">수동</td>
+            <td style="padding:12px;" data-i18n="solution.compare.product.flip">기판 앞/뒤 전환</td>
+            <td style="padding:12px;"><span style="text-decoration-line:underline; text-decoration-color:rgba(212, 90, 73, 0.95); text-decoration-thickness:2px; text-underline-offset:5px; filter:drop-shadow(0 0 6px rgba(212, 90, 73, 0.75));" data-i18n="solution.compare.product.auto">자동</span></td>
+            <td style="padding:12px;" data-i18n="solution.compare.product.manual">수동</td>
             </tr>
 
             <tr>
-            <td style="padding:12px;">개구부 개폐</td>
-            <td style="padding:12px;"><span style="text-decoration-line:underline; text-decoration-color:rgba(212, 90, 73, 0.95); text-decoration-thickness:2px; text-underline-offset:5px; filter:drop-shadow(0 0 6px rgba(212, 90, 73, 0.75));">자동</span></td>
-            <td style="padding:12px;">수동</td>
+            <td style="padding:12px;" data-i18n="solution.compare.product.opening">개구부 개폐</td>
+            <td style="padding:12px;"><span style="text-decoration-line:underline; text-decoration-color:rgba(212, 90, 73, 0.95); text-decoration-thickness:2px; text-underline-offset:5px; filter:drop-shadow(0 0 6px rgba(212, 90, 73, 0.75));" data-i18n="solution.compare.product.auto">자동</span></td>
+            <td style="padding:12px;" data-i18n="solution.compare.product.manual">수동</td>
             </tr>
 
             <tr>
-            <td style="padding:12px;">기판별 레시피 저장</td>
-            <td style="padding:12px;"><span style="text-decoration-line:underline; text-decoration-color:rgba(212, 90, 73, 0.95); text-decoration-thickness:2px; text-underline-offset:5px; filter:drop-shadow(0 0 6px rgba(212, 90, 73, 0.75));">지원</span></td>
-            <td style="padding:12px;">미지원</td>
+            <td style="padding:12px;" data-i18n="solution.compare.product.recipe">기판별 레시피 저장</td>
+            <td style="padding:12px;"><span style="text-decoration-line:underline; text-decoration-color:rgba(212, 90, 73, 0.95); text-decoration-thickness:2px; text-underline-offset:5px; filter:drop-shadow(0 0 6px rgba(212, 90, 73, 0.75));" data-i18n="solution.compare.product.supported">지원</span></td>
+            <td style="padding:12px;" data-i18n="solution.compare.product.unsupported">미지원</td>
             </tr>
 
             <tr>
-            <td style="padding:12px;">사이즈</td>
+            <td style="padding:12px;" data-i18n="solution.compare.product.size">사이즈</td>
             <td style="padding:12px;">1,200 x 1,000 x 1,850 mm</td>
             <td style="padding:12px;">1,000 x 845 x 1,850 mm</td>
             </tr>
 
             <tr>
-            <td style="padding:12px;">무게</td>
-            <td style="padding:12px;">약 450kg</td>
-            <td style="padding:12px;">약 250kg</td>
+            <td style="padding:12px;" data-i18n="solution.compare.product.weight">무게</td>
+            <td style="padding:12px;" data-i18n="solution.compare.product.weight.15">약 450kg</td>
+            <td style="padding:12px;" data-i18n="solution.compare.product.weight.1">약 250kg</td>
             </tr>
 
             <tr class="compare-video-row">
-            <td style="padding:12px;">고객 실사용 영상</td>
+            <td style="padding:12px;" data-i18n="solution.customerVideo.title">고객 실사용 영상</td>
             <td style="padding:12px;">
                 <div style="position:relative; width:100%; aspect-ratio:16 / 9; overflow:hidden; border-radius:12px;">
                     <iframe
@@ -401,7 +408,7 @@
         </table>
 
         <div class="mobile-customer-videos">
-            <h3>고객 실사용 영상</h3>
+            <h3 data-i18n="solution.customerVideo.title">고객 실사용 영상</h3>
 
             <div class="mobile-customer-video">
                 <h4>REX1.5</h4>
@@ -434,6 +441,7 @@
 </main>
 
 <script src="bg.js"></script>
+<script src="lang.js"></script>
 <script>
   const solutionVideo = document.getElementById("solution-video");
   const videoButtons = document.querySelectorAll(".video-switch-button");
@@ -471,9 +479,9 @@
   }
 </script>
 <footer class="site-footer">
-  <p>© 2026 (주)레졸루션 All rights reserved.</p>
+  <p data-i18n="footer.copyright">© 2026 (주)레졸루션 All rights reserved.</p>
   <p><a href="mailto:hkim@rexolution.ai">hkim@rexolution.ai</a></p>
-  <p>서울특별시 서초구 매헌로 16 하이브랜드 AI양재허브 1201호</p>
+  <p data-i18n="footer.address">서울특별시 서초구 매헌로 16 하이브랜드 AI양재허브 1201호</p>
 </footer>
 </body>
 </html>

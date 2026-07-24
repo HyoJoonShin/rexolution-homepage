@@ -20,10 +20,17 @@
     <a class="nav-youtube" href="https://www.youtube.com/@Rexolution_KOR" target="_blank" rel="noopener noreferrer" aria-label="Rexolution YouTube">
       <img src="images/youtube.png" alt="">
     </a>
-    <a href="about.html" class="active" aria-current="page">회사 소개</a>
-    <a href="solution.html">솔루션</a>
-    <a href="contact.html">문의하기</a>
-    <a href="map.html">오시는 길</a>
+    <a href="about.html" class="active" aria-current="page" data-i18n="nav.about">회사 소개</a>
+    <a href="solution.html" data-i18n="nav.solution">솔루션</a>
+    <a href="contact.html" data-i18n="nav.contact">문의하기</a>
+    <a href="map.html" data-i18n="nav.map">오시는 길</a>
+    <div class="language-switcher">
+      <button class="language-current" type="button" aria-label="Language selector">KR</button>
+      <div class="language-menu">
+        <button type="button" data-lang-option="ko">KR</button>
+        <button type="button" data-lang-option="en">EN</button>
+      </div>
+    </div>
   </div>
 </nav>
 
@@ -31,17 +38,17 @@
   <section class="page-hero">
     <div class="page-hero-inner about-page-hero-inner">
       <p class="eyebrow">Company</p>
-      <h1>회사 소개</h1>
+      <h1 data-i18n="about.title">회사 소개</h1>
       <div class="about-overview-card">
       <div class="about-hero-grid">
         <div class="about-hero-copy">
-          <p>
+          <p data-i18n-html="about.copy.1">
             <strong>1. </strong> PCB Assembly OQC(Outgoing QC)는 여전히 <strong>작업자의 육안검사에 의존</strong>하여 <strong>수작업</strong>으로 이루어지고 있습니다. 그 결과 검사 품질은 작업자 숙련도에 크게<br>좌우됩니다. 이 문제를 해결하기 위해 <strong>서울대·KAIST 출신</strong>들이 모여 레졸루션을<br>설립했습니다.
           </p>
-          <p>
+          <p data-i18n-html="about.copy.2">
             <strong>2. </strong> 레졸루션의 <strong class="ai-highlight">AI 비전 검사기</strong>를 통해 OQC를 <strong>자동화</strong>함으로써 <strong>생산성을 극대화</strong>할 수 있습니다. 신규 제품마다 티칭과 디버깅이 필요한 기존 AOI 장비와 달리, <strong>티칭없이 즉시검사가 가능</strong>하여 <strong>다품종 소량 생산 환경에 최적화된 검사 솔루션</strong>을 제공합니다.
           </p>
-          <p>
+          <p data-i18n-html="about.copy.3">
             <strong>3. </strong> <strong>하드웨어부터 AI 모델까지 모두 자체 개발</strong>하여 높은 안정성과 품질을 제공<br>합니다. 또한 전담 기술지원 핫라인을 운영하여 A/S와 현장 이슈에 신속하게<br>대응합니다.
           </p>
         </div>
@@ -53,32 +60,32 @@
       <div class="leadership-panel">
         <div class="leadership-grid">
           <article class="leader-profile">
-            <h3>CEO 김 혁</h3>
+            <h3 data-i18n="about.leader.ceo">CEO 김 혁</h3>
             <ul style="margin-left:12px;">
-              <li>KAIST 기술경영학 석사</li>
-              <li>前 자율주행로봇회사 트위니<br>전략기획실장/이사</li>
+              <li data-i18n="about.leader.ceo.1">KAIST 기술경영학 석사</li>
+              <li data-i18n-html="about.leader.ceo.2">前 자율주행로봇회사 트위니<br>전략기획실장/이사</li>
             </ul>
           </article>
 
           <img class="team-emblem team-emblem-kaist" src="images/kaist.png" alt="KAIST">
 
           <article class="leader-profile">
-            <h3>CTO 이 철민</h3>
+            <h3 data-i18n="about.leader.cto">CTO 이 철민</h3>
             <ul style="margin-left:12px;">
-              <li>서울대학교 기계공학 학사</li>
-              <li>RoboCup ‘23 프랑스 보르도 <span class="nowrap">우승</span></li>
-              <li>‘18 대통령과학장학생 선발</li>
+              <li data-i18n="about.leader.cto.1">서울대학교 기계공학 학사</li>
+              <li data-i18n-html="about.leader.cto.2">RoboCup ‘23 프랑스 보르도 <span class="nowrap">우승</span></li>
+              <li data-i18n="about.leader.cto.3">‘18 대통령과학장학생 선발</li>
             </ul>
           </article>
 
           <img class="team-emblem team-emblem-snu" src="images/snu.png" alt="Seoul National University">
 
           <article class="leader-profile">
-            <h3>COO 강 성식</h3>
+            <h3 data-i18n="about.leader.coo">COO 강 성식</h3>
             <ul style="margin-left:12px;">
-              <li>서울대학교 경영학 학사</li>
-              <li>공인회계사(KICPA)</li>
-              <li>前 삼일회계법인<br>Senior Associate</li>
+              <li data-i18n="about.leader.coo.1">서울대학교 경영학 학사</li>
+              <li data-i18n="about.leader.coo.2">공인회계사(KICPA)</li>
+              <li data-i18n-html="about.leader.coo.3">前 삼일회계법인<br>Senior Associate</li>
             </ul>
           </article>
         </div>
@@ -93,101 +100,101 @@
       <div class="history-awards" style="margin-left:40px;">
       <!-- History -->
       <div>
-        <h3 class="sub-title">회사 연혁</h3>
+        <h3 class="sub-title" data-i18n="about.history.title">회사 연혁</h3>
         <div class="timeline-item" style="margin-left:25px; margin-bottom:10px;">
           <div class="year">2024.07.25</div>
-          Seed TIPS 선정
+          <span data-i18n="about.history.1">Seed TIPS 선정</span>
         </div>
 
         <div class="timeline-item" style="margin-left:25px; margin-bottom:10px;">
           <div class="year">2024.08.05</div>
-          ㈜레졸루션 법인 설립
+          <span data-i18n="about.history.2">㈜레졸루션 법인 설립</span>
         </div>
 
         <div class="timeline-item" style="margin-left:25px; margin-bottom:10px;">
           <div class="year">2024.08.16</div>
           <a href="https://www.unicornfactory.co.kr/article/2024100914080270742" target="_blank">
-            Seed 투자 유치 (Antler Korea) 🔗
+            <span data-i18n="about.history.3">Seed 투자 유치 (Antler Korea) 🔗</span>
           </a>
         </div>
 
         <div class="timeline-item" style="margin-left:25px; margin-bottom:10px;">
           <div class="year">2024.12.16</div>
           <a href="https://www.mt.co.kr/future/2025/01/13/2025011314553277675" target="_blank">
-            TIPS R&D 선정 🔗
+            <span data-i18n="about.history.4">TIPS R&D 선정 🔗</span>
           </a>
         </div>
 
         <div class="timeline-item" style="margin-left:25px; margin-bottom:10px;">
           <div class="year">2025.02.04</div>
           <a href="http://www.sbiztoday.kr/news/articleView.html?idxno=23555" target="_blank">
-            2025 KDB NextOne 서울 10기 선정 🔗
+            <span data-i18n="about.history.5">2025 KDB NextOne 서울 10기 선정 🔗</span>
           </a>
         </div>
 
         <div class="timeline-item" style="margin-left:25px; margin-bottom:10px;">
           <div class="year">2025.03.14</div>
           <a href="https://www.unicornfactory.co.kr/article/2025062415563980810" target="_blank">
-            2025 Google for Startup Accelerator 선정 🔗
+            <span data-i18n="about.history.6">2025 Google for Startup Accelerator 선정 🔗</span>
           </a>
         </div>
 
         <div class="timeline-item" style="margin-left:25px; margin-bottom:10px;">
           <div class="year">2025.06.01</div>
           <a href="https://platum.kr/archives/272086" target="_blank">
-            캐나다 MILA AI연구소 공동 연구 스타트업 선정 🔗
+            <span data-i18n="about.history.7">캐나다 MILA AI연구소 공동 연구 스타트업 선정 🔗</span>
           </a>
         </div>
 
         <div class="timeline-item" style="margin-left:25px; margin-bottom:10px;">
           <div class="year">2025.12.16</div>
-            2025 NVIDIA Incepetion Program 선정
+            <span data-i18n="about.history.8">2025 NVIDIA Incepetion Program 선정</span>
         </div>
       </div>
 
       <!-- Awards -->
       <div>
-        <h3 class="sub-title">수상 이력</h3>
+        <h3 class="sub-title" data-i18n="about.awards.title">수상 이력</h3>
         <div class="timeline-item" style="margin-left:25px; margin-bottom:10px;">
           <div class="year">2024.09.05</div>
-          2024 대덕특구 딥테크 창업경진대회 ‘우수상‘ 수상
+          <span data-i18n="about.awards.1">2024 대덕특구 딥테크 창업경진대회 ‘우수상‘ 수상</span>
         </div>
 
         <div class="timeline-item" style="margin-left:25px; margin-bottom:10px;">
           <div class="year">2024.11.22</div>
           <a href="https://wowtale.net/2024/11/26/233694/" target="_blank">
-            2024 중국 골든팬더 글로벌 창업경진대회 TOP 10 🔗
+            <span data-i18n="about.awards.2">2024 중국 골든팬더 글로벌 창업경진대회 TOP 10 🔗</span>
           </a>
         </div>
 
         <div class="timeline-item" style="margin-left:25px; margin-bottom:10px;">
           <div class="year">2024.11.27</div>
-          2024 Vietnam TECHFEST IR Competition ‘Runner-up’
+          <span data-i18n="about.awards.3">2024 Vietnam TECHFEST IR Competition ‘Runner-up’</span>
         </div>
 
         <div class="timeline-item" style="margin-left:25px; margin-bottom:10px;">
           <div class="year">2025.02.07</div>
-          2025 중국/영국 글로벌 창업경진대회 ‘우수상‘ 수상
+          <span data-i18n="about.awards.4">2025 중국/영국 글로벌 창업경진대회 ‘우수상‘ 수상</span>
         </div>
 
         <div class="timeline-item" style="margin-left:25px; margin-bottom:10px;">
           <div class="year">2025.03.26</div>
           <a href="https://blog.naver.com/bakbht/223829541240" target="_blank">
-            2025 서초창업스테이션 IR 경진대회 ‘대상‘ 수상 🔗
+            <span data-i18n="about.awards.5">2025 서초창업스테이션 IR 경진대회 ‘대상‘ 수상 🔗</span>
           </a>
         </div>
 
         <div class="timeline-item" style="margin-left:25px; margin-bottom:10px;">
           <div class="year">2025.05.21</div>
           <a href="https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003135149" target="_blank">
-            2025 부천창업리그 ‘대상’ 수상 🔗
+            <span data-i18n="about.awards.6">2025 부천창업리그 ‘대상’ 수상 🔗</span>
           </a>
         </div>
 
         <div class="timeline-item" style="margin-left:25px; margin-bottom:10px;">
           <div class="year">2025.09.12</div>
           <a href="https://www.todayenergy.kr/news/articleView.html?idxno=288999" target="_blank">
-            G밸리창업경진대회 ‘대상’ 수상 🔗
+            <span data-i18n="about.awards.7">G밸리창업경진대회 ‘대상’ 수상 🔗</span>
           </a>
         </div>
       </div>
@@ -200,10 +207,11 @@
 </main>
 
 <script src="bg.js"></script>
+<script src="lang.js"></script>
 <footer class="site-footer">
-  <p>© 2026 (주)레졸루션 All rights reserved.</p>
+  <p data-i18n="footer.copyright">© 2026 (주)레졸루션 All rights reserved.</p>
   <p><a href="mailto:hkim@rexolution.ai">hkim@rexolution.ai</a></p>
-  <p>서울특별시 서초구 매헌로 16 하이브랜드 AI양재허브 1201호</p>
+  <p data-i18n="footer.address">서울특별시 서초구 매헌로 16 하이브랜드 AI양재허브 1201호</p>
 </footer>
 </body>
 </html>

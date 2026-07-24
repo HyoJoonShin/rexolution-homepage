@@ -20,10 +20,17 @@
     <a class="nav-youtube" href="https://www.youtube.com/@Rexolution_KOR" target="_blank" rel="noopener noreferrer" aria-label="Rexolution YouTube">
       <img src="images/youtube.png" alt="">
     </a>
-    <a href="about.html">회사 소개</a>
-    <a href="solution.html">솔루션</a>
-    <a href="contact.html">문의하기</a>
-    <a href="map.html" class="active" aria-current="page">오시는 길</a>
+    <a href="about.html" data-i18n="nav.about">회사 소개</a>
+    <a href="solution.html" data-i18n="nav.solution">솔루션</a>
+    <a href="contact.html" data-i18n="nav.contact">문의하기</a>
+    <a href="map.html" class="active" aria-current="page" data-i18n="nav.map">오시는 길</a>
+    <div class="language-switcher">
+      <button class="language-current" type="button" aria-label="Language selector">KR</button>
+      <div class="language-menu">
+        <button type="button" data-lang-option="ko">KR</button>
+        <button type="button" data-lang-option="en">EN</button>
+      </div>
+    </div>
   </div>
 </nav>
 
@@ -31,7 +38,7 @@
   <section class="page-hero">
     <div class="page-hero-inner">
       <p class="eyebrow">Visit us</p>
-      <h1>오시는 길</h1>
+      <h1 data-i18n="map.title">오시는 길</h1>
     </div>
   </section>
 
@@ -77,13 +84,13 @@
 
         <!-- 정보 -->
         <div style="margin-top:20px; line-height:1.6;">
-          <p><strong>주소</strong>
+          <p data-i18n-html="map.address"><strong>주소</strong>
            서울특별시 서초구 매헌로 16 하이브랜드 AI양재허브 1201호</p>
 
-          <p><strong>전화번호</strong>
+          <p data-i18n-html="map.phone"><strong>전화번호</strong>
            010-9048-1583</p>
 
-          <p><strong>이메일</strong>
+          <p data-i18n-html="map.email"><strong>이메일</strong>
            hkim@rexolution.ai</p>
         </div>
       </article>
@@ -92,6 +99,7 @@
 </main>
 
 <script src="bg.js"></script>
+<script src="lang.js"></script>
 <script>
 window.initMap = function () {
   kakao.maps.load(function () {
@@ -119,9 +127,9 @@ window.initMap = function () {
         onload="initMap()"></script>
 
 <footer class="site-footer">
-  <p>© 2026 (주)레졸루션 All rights reserved.</p>
+  <p data-i18n="footer.copyright">© 2026 (주)레졸루션 All rights reserved.</p>
   <p><a href="mailto:hkim@rexolution.ai">hkim@rexolution.ai</a></p>
-  <p>서울특별시 서초구 매헌로 16 하이브랜드 AI양재허브 1201호</p>
+  <p data-i18n="footer.address">서울특별시 서초구 매헌로 16 하이브랜드 AI양재허브 1201호</p>
 </footer>
 </body>
 </html>
