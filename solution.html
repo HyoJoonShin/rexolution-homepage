@@ -47,6 +47,8 @@
         <div class="video-wrap">
             <iframe
             id="solution-video"
+            data-default-video-ko="wknPwJFfz4w"
+            data-default-video-en="jTyeYSXn9o8"
             src="https://www.youtube.com/embed/wknPwJFfz4w?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&playsinline=1"
             style="width:100%; height:100%; border-radius:10px;"
             frameborder="0"
@@ -447,6 +449,12 @@
   const videoButtons = document.querySelectorAll(".video-switch-button");
   const videoOptions = "autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&playsinline=1";
 
+  function setDefaultSolutionVideo(lang) {
+    const videoId = lang === "en" ? solutionVideo.dataset.defaultVideoEn : solutionVideo.dataset.defaultVideoKo;
+    solutionVideo.src = `https://www.youtube.com/embed/${videoId}?${videoOptions}`;
+    videoButtons.forEach((item) => item.classList.remove("active"));
+  }
+
   videoButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const videoId = button.dataset.videoId;
@@ -454,6 +462,10 @@
       videoButtons.forEach((item) => item.classList.remove("active"));
       button.classList.add("active");
     });
+  });
+
+  window.addEventListener("rexolution:languagechange", (event) => {
+    setDefaultSolutionVideo(event.detail.lang);
   });
 
   const customerVideoFrames = document.querySelectorAll(".customer-video-frame");

@@ -205,6 +205,10 @@ function applyLanguage(lang) {
   if (I18N_TITLES[pageName]) {
     document.title = I18N_TITLES[pageName][nextLang];
   }
+
+  window.dispatchEvent(new CustomEvent("rexolution:languagechange", {
+    detail: { lang: nextLang }
+  }));
 }
 
 window.getLangText = function getLangText(key, fallback) {
