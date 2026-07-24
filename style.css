@@ -1386,6 +1386,11 @@ nav {
   font-weight: inherit;
 }
 
+.tht-continuation {
+  display: inline-block;
+  margin-left: 6ch;
+}
+
 .defect-type-images {
   display: grid;
   gap: 12px;

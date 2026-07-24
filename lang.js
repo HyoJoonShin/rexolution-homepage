@@ -67,9 +67,10 @@ const I18N_EN = {
   "solution.ai.normal": "Normal",
   "solution.ai.reverse": "Reverse Insertion",
   "solution.defect.title": "Detection Scope",
-  "solution.defect.tht": "<strong>THT</strong> <strong>- Non Insertion · Wrong Insertion · Reverse Insertion · Short · Insufficient Solder · low Solder · Excess Solder · Pin Hole · Cold Solder · Solder Spike</strong>",
+  "solution.defect.tht": "<strong>THT</strong> <strong>- Non Insertion · Wrong Insertion · Reverse Insertion · Short · Insufficient Solder · low Solder · Excess Solder,<br><span class=\"tht-continuation\">Pin Hole · Cold Solder · Solder Spike</span></strong>",
   "solution.defect.smd": "<strong>SMD - Non Insertion · Component cracking (SMD Chip Resistor &amp; MLCC)</strong>",
   "solution.defect.etc": "<strong>Others</strong> <strong>- Solder Ball · Solder Debris</strong>",
+  "solution.defect.image1": "images/defect_type1_en.png",
   "solution.compare.old.title": "Conventional Inspection Equipment vs REX",
   "solution.compare.old.legacy": "Conventional Equipment",
   "solution.compare.old.teaching": "Teaching",
@@ -87,7 +88,7 @@ const I18N_EN = {
   "solution.spec.title": "Common Product Specifications",
   "solution.spec.board.value": "Max. 300 x 225 mm",
   "solution.spec.items": "Inspection Items",
-  "solution.spec.items.tht": "[THT] Non Insertion, Wrong Insertion, Reverse Insertion, Short, Insufficient Solder, low Solder, Excess Solder, Pin Hole, Cold Solder, Solder Spike",
+  "solution.spec.items.tht": "[THT] Non Insertion, Wrong Insertion, Reverse Insertion, Short, Insufficient Solder, low Solder, Excess Solder,<br><span class=\"tht-continuation\">Pin Hole, Cold Solder, Solder Spike</span>",
   "solution.spec.items.smd": "[SMD] Non Insertion, Component Cracking (SMD Chip Resistor, MLCC)",
   "solution.spec.items.etc": "[ETC] Solder Ball, Solder Debris",
   "solution.spec.tact.1": "[Option 1] About 20 seconds",
@@ -96,7 +97,7 @@ const I18N_EN = {
   "solution.compare.product.flip": "Board flipping",
   "solution.compare.product.title": "REX1.5 · REX1 Comparison",
   "solution.compare.product.opening": "Access Door Operation",
-  "solution.compare.product.recipe": "Board-Specific Recipe Storage",
+  "solution.compare.product.recipe": "Board-Specific Recipe Saving",
   "solution.compare.product.auto": "Automatic",
   "solution.compare.product.manual": "Manual",
   "solution.compare.product.supported": "Supported",
@@ -191,6 +192,10 @@ function applyLanguage(lang) {
 
   document.querySelectorAll("[data-i18n-title]").forEach((element) => {
     translateAttribute(element, "i18nTitle", "title", "data-i18n-default-title", nextLang);
+  });
+
+  document.querySelectorAll("[data-i18n-src]").forEach((element) => {
+    translateAttribute(element, "i18nSrc", "src", "data-i18n-default-src", nextLang);
   });
 
   document.querySelectorAll(".language-current").forEach((button) => {
