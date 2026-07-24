@@ -5,7 +5,7 @@ const I18N_EN = {
   "nav.map": "Location",
 
   "footer.copyright": "© 2026 Rexolution Inc. All rights reserved.",
-  "footer.address": "1201, AI Yangjae Hub, HyBrand, 16 Maeheon-ro, Seocho-gu, Seoul, Republic of Korea",
+  "footer.address": "1201, AI Yangjae Hub, HIBrand, 16 Maeheon-ro, Seocho-gu, Seoul, Republic of Korea",
 
   "home.hero.title": "PCB Assembly<br>Inspection Automation<br>by REX",
   "home.hero.copy": "Automate PCB Assembly inspection with a reasonably priced AI vision inspector.<br>Maximize productivity with instant inspection that requires no teaching.",
@@ -13,17 +13,17 @@ const I18N_EN = {
   "home.hero.catalog": "Product Brochure",
 
   "about.title": "About Us",
-  "about.copy.1": "<strong>1. </strong> PCB Assembly OQC (Outgoing QC) still relies on <strong>manual visual inspection by operators</strong>. As a result, inspection quality depends heavily on operator skill.<br>Rexolution was founded by members from <strong>Seoul National University and KAIST</strong> to solve this problem.",
+  "about.copy.1": "<strong>1. </strong> PCB Assembly OQC (Outgoing QC) still relies on <strong>manual visual inspection by inspectors</strong>. As a result, inspection quality depends heavily on inspector's proficiency.<br>Rexolution was founded by members from <strong>Seoul National University and KAIST</strong> to solve this problem.",
   "about.copy.2": "<strong>2. </strong> Rexolution's <strong class=\"ai-highlight\">AI vision inspector</strong> automates OQC and <strong>maximizes productivity</strong>. Unlike conventional AOI equipment that requires teaching and debugging for every new product, REX enables <strong>instant inspection without teaching</strong> and provides an inspection solution optimized for <strong>high-mix, low-volume production</strong>.",
   "about.copy.3": "<strong>3. </strong> We develop everything in-house, from <strong>hardware to AI models</strong>, to deliver high stability and quality.<br>We also operate a dedicated technical support hotline to respond quickly to A/S and on-site issues.",
-  "about.leader.ceo": "CEO Hyuk Kim",
-  "about.leader.ceo.1": "M.S. in Technology Management, KAIST",
+  "about.leader.ceo": "CEO Steve Kim",
+  "about.leader.ceo.1": "M.S. in Business and Technology Management, KAIST",
   "about.leader.ceo.2": "Former Head/Director of Strategy Planning,<br>Twinny, an autonomous mobile robot company",
-  "about.leader.cto": "CTO Cheolmin Lee",
+  "about.leader.cto": "CTO Jimmy Lee",
   "about.leader.cto.1": "B.S. in Mechanical Engineering, Seoul National University",
   "about.leader.cto.2": "Winner, RoboCup 2023 Bordeaux, France",
   "about.leader.cto.3": "Selected as a 2018 Presidential Science Scholar",
-  "about.leader.coo": "COO Sungsik Kang",
+  "about.leader.coo": "COO Sean Kang",
   "about.leader.coo.1": "B.B.A., Seoul National University",
   "about.leader.coo.2": "Certified Public Accountant (KICPA)",
   "about.leader.coo.3": "Former Senior Associate,<br>Samil PwC",
@@ -52,7 +52,7 @@ const I18N_EN = {
   "solution.video.solder": "Solder Inspection",
   "solution.innovation.title": "Inspection Innovation by REX",
   "solution.innovation.1.title": "Instant Inspection Without Teaching",
-  "solution.innovation.1.copy": "With a deep learning-based inspection system, REX can inspect everything from small samples to mass-produced boards immediately without separate teaching.<br>No highly skilled operator is required.",
+  "solution.innovation.1.copy": "With a deep learning-based inspection system, REX can inspect everything from small samples to mass-produced boards immediately without separate teaching.<br>No highly skilled inspector is required.",
   "solution.innovation.2.title": "High-Speed Inspection Without Waiting",
   "solution.innovation.2.copy": "Defects are detected simultaneously through GPU parallel processing.<br>For a 300 mm x 225 mm board, REX performs high-speed inspection in about 20 seconds, minimizing inspection bottlenecks.",
   "solution.innovation.3.title": "Complete Data Storage Without Missing Records",
@@ -82,7 +82,7 @@ const I18N_EN = {
   "solution.compare.old.record.legacy": "Inspection records are difficult to track",
   "solution.compare.old.record.rex": "Automatic image and history storage",
   "solution.compare.old.method": "Inspection Method",
-  "solution.compare.old.method.legacy": "Operator-dependent",
+  "solution.compare.old.method.legacy": "Inspector-dependent",
   "solution.compare.old.method.rex": "AI-based automatic judgment",
   "solution.spec.title": "Common Product Specifications",
   "solution.spec.board.value": "Max. 300 x 225 mm",
@@ -126,7 +126,7 @@ const I18N_EN = {
   "contact.alert.fail": "Failed to send. Please try again.",
 
   "map.title": "Location",
-  "map.address": "<strong>Address</strong> 1201, AI Yangjae Hub, HyBrand, 16 Maeheon-ro, Seocho-gu, Seoul, Republic of Korea",
+  "map.address": "<strong>Address</strong> 1201, AI Yangjae Hub, HIBrand, 16 Maeheon-ro, Seocho-gu, Seoul, Republic of Korea",
   "map.phone": "<strong>Phone</strong> 010-9048-1583",
   "map.email": "<strong>Email</strong> hkim@rexolution.ai"
 };
