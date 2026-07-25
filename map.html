@@ -112,34 +112,54 @@
 <script>
 const kakaoMapWrapper = document.getElementById("map-wrapper");
 const googleMapWrapper = document.getElementById("google-map-wrapper");
+const rexolutionMapCenter = { lat: 37.462506, lng: 127.036929 };
+let rexolutionKakaoMap = null;
+
+function refreshKakaoMap() {
+  if (!rexolutionKakaoMap || !window.kakao || !kakao.maps) return;
+
+  window.setTimeout(() => {
+    const center = new kakao.maps.LatLng(rexolutionMapCenter.lat, rexolutionMapCenter.lng);
+    rexolutionKakaoMap.relayout();
+    rexolutionKakaoMap.setCenter(center);
+  }, 0);
+}
 
 function setMapLanguage(lang) {
   const isEnglish = lang === "en";
   kakaoMapWrapper.style.display = isEnglish ? "none" : "block";
   googleMapWrapper.style.display = isEnglish ? "block" : "none";
+
+  if (!isEnglish) {
+    refreshKakaoMap();
+  }
 }
 
 window.addEventListener("rexolution:languagechange", (event) => {
   setMapLanguage(event.detail.lang);
 });
 
+setMapLanguage(localStorage.getItem("rexolution-lang") || "ko");
+
 window.initMap = function () {
   kakao.maps.load(function () {
 
     const container = document.getElementById('map');
+    const center = new kakao.maps.LatLng(rexolutionMapCenter.lat, rexolutionMapCenter.lng);
 
     const options = {
-      center: new kakao.maps.LatLng(37.462506,127.036929),
+      center,
       level: 3
     };
 
-    const map = new kakao.maps.Map(container, options);
+    rexolutionKakaoMap = new kakao.maps.Map(container, options);
 
     const marker = new kakao.maps.Marker({
       position: options.center
     });
 
-    marker.setMap(map);
+    marker.setMap(rexolutionKakaoMap);
+    refreshKakaoMap();
 
   });
 };

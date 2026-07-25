@@ -106,7 +106,7 @@ const I18N_EN = {
   "solution.compare.product.weight": "Weight",
   "solution.compare.product.weight.15": "Approx. 450 kg",
   "solution.compare.product.weight.1": "Approx. 250 kg",
-  "solution.customerVideo.title": "Customer Use Videos",
+  "solution.customerVideo.title": "Customer Site Videos",
 
   "table.category": "Category",
 
