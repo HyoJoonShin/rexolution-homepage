@@ -476,7 +476,7 @@ nav {
 .about-hero-image {
   position: relative;
   justify-self: start;
-  width: min(100%, 350px);
+  width: min(100%, 315px);
 }
 
 .about-hero-image img {
