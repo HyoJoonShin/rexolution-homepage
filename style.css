@@ -27,6 +27,9 @@ body {
   font-family: "Pretendard", "Pretendard Variable", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   font-feature-settings: "tnum" 0;
   text-rendering: optimizeLegibility;
+  line-break: strict;
+  word-break: keep-all;
+  overflow-wrap: break-word;
   color: var(--text);
   background:
     radial-gradient(circle at top left, rgba(122, 30, 20, 0.22), transparent 34%),
@@ -468,8 +471,8 @@ nav {
   line-height: 1.75;
   text-align: justify;
   text-align-last: left;
-  word-break: normal;
-  overflow-wrap: normal;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 .about-hero-copy strong {
@@ -1251,8 +1254,8 @@ nav {
   .spec-table td {
     padding: 8px 6px !important;
     vertical-align: top;
-    overflow-wrap: anywhere;
     word-break: keep-all;
+    overflow-wrap: break-word;
   }
 
   .spec-table td:first-child {
@@ -1266,8 +1269,8 @@ nav {
 
   .spec-note {
     font-size: 12px !important;
-    overflow-wrap: anywhere;
     word-break: keep-all;
+    overflow-wrap: break-word;
   }
 
   .spec-mobile-break-label {
@@ -1291,8 +1294,8 @@ nav {
   .product-compare-table td {
     padding: 10px 8px !important;
     vertical-align: middle;
-    overflow-wrap: anywhere;
     word-break: keep-all;
+    overflow-wrap: break-word;
   }
 
   .product-compare-table th:first-child,
