@@ -159,7 +159,9 @@ function translateElement(element, lang) {
   }
 
   if (textKey) {
-    rememberDefault(element, null, "data-i18n-default-text");
+    if (!element.hasAttribute("data-i18n-default-text")) {
+      element.setAttribute("data-i18n-default-text", element.textContent);
+    }
     element.textContent = lang === "en" && I18N_EN[textKey]
       ? I18N_EN[textKey]
       : element.getAttribute("data-i18n-default-text");

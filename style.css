@@ -453,6 +453,7 @@ nav {
 .about-hero-copy {
   display: grid;
   gap: 18px;
+  width: 100%;
   max-width: 560px;
 }
 
@@ -463,7 +464,8 @@ nav {
   line-height: 1.75;
   text-align: justify;
   text-align-last: left;
-  word-break: keep-all;
+  word-break: normal;
+  overflow-wrap: normal;
 }
 
 .about-hero-copy strong {
