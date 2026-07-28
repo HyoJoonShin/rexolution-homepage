@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
 :root {
   --main-red: #7a1e14;
   --accent: #d45a49;
@@ -22,7 +24,9 @@ html {
 body {
   min-height: 100vh;
   overflow-x: hidden;
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Pretendard", "Pretendard Variable", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-feature-settings: "tnum" 0;
+  text-rendering: optimizeLegibility;
   color: var(--text);
   background:
     radial-gradient(circle at top left, rgba(122, 30, 20, 0.22), transparent 34%),

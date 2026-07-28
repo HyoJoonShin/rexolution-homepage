@@ -146,6 +146,19 @@ function rememberDefault(element, attr, storeAttr) {
   }
 }
 
+function decodeHtmlEntities(value) {
+  const textarea = document.createElement("textarea");
+  let decoded = value || "";
+
+  for (let i = 0; i < 3; i += 1) {
+    textarea.innerHTML = decoded;
+    if (textarea.value === decoded) break;
+    decoded = textarea.value;
+  }
+
+  return decoded;
+}
+
 function translateElement(element, lang) {
   const htmlKey = element.dataset.i18nHtml;
   const textKey = element.dataset.i18n;
@@ -164,7 +177,7 @@ function translateElement(element, lang) {
     }
     element.textContent = lang === "en" && I18N_EN[textKey]
       ? I18N_EN[textKey]
-      : element.getAttribute("data-i18n-default-text");
+      : decodeHtmlEntities(element.getAttribute("data-i18n-default-text"));
   }
 }
 
