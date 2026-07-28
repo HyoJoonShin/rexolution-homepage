@@ -7,7 +7,7 @@ const I18N_EN = {
   "footer.copyright": "© 2026 Rexolution Inc. All rights reserved.",
   "footer.address": "1201, AI Yangjae Hub, HIBrand, 16 Maeheon-ro, Seocho-gu, Seoul, Republic of Korea",
 
-  "home.hero.title": "PCB Assembly<br>Inspection Automation<br>by REX",
+  "home.hero.title": "AI-Powered<br>PCB Assembly<br>Inspection Automation",
   "home.hero.copy": "Automate PCB Assembly inspection with a reasonably priced AI vision inspector.<br>Maximize productivity with instant inspection that requires no teaching.",
   "home.hero.solution": "View Solution",
   "home.hero.catalog": "Product Brochure",
@@ -18,7 +18,7 @@ const I18N_EN = {
   "about.copy.3": "<strong>3. </strong> We develop everything in-house, from <strong>hardware to AI models</strong>, to deliver high stability and quality.<br>We also operate a dedicated technical support hotline to respond quickly to A/S and on-site issues.",
   "about.leader.ceo": "CEO Steve Kim",
   "about.leader.ceo.1": "M.S. in Business and Technology Management, KAIST",
-  "about.leader.ceo.2": "Former Head/Director of Strategy Planning,<br>Twinny, an autonomous mobile robot company",
+  "about.leader.ceo.2": "Former Head/Director,<br>Strategy Planning,<br>Twinny, an autonomous mobile robot company",
   "about.leader.cto": "CTO Jimmy Lee",
   "about.leader.cto.1": "B.S. in Mechanical Engineering, Seoul National University",
   "about.leader.cto.2": "Winner, RoboCup 2023 Bordeaux, France",

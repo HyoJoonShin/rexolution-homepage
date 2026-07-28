@@ -461,6 +461,9 @@ nav {
   color: var(--text-soft);
   font-size: 17px;
   line-height: 1.75;
+  text-align: justify;
+  text-align-last: left;
+  word-break: keep-all;
 }
 
 .about-hero-copy strong {
@@ -595,6 +598,7 @@ nav {
   z-index: 1;
   width: max-content;
   max-width: 100%;
+  align-self: start;
   justify-self: center;
   text-align: left;
 }
@@ -604,6 +608,15 @@ nav {
   color: var(--text);
   font-size: 20px;
   font-weight: 800;
+}
+
+.leader-profile h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.leader-profile h3 a:hover {
+  color: var(--accent);
 }
 
 .leader-profile ul {
