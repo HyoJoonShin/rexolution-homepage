@@ -763,6 +763,13 @@ nav {
   overflow-wrap: break-word;
 }
 
+.solution-innovation-copy {
+  text-align: justify;
+  text-align-last: left;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
 /* TIMELINE */
 .timeline {
   display: grid;
