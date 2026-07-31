@@ -1008,9 +1008,9 @@ nav {
     z-index: 0;
     width: 178px;
     max-height: 198px;
-    margin: -22px auto -34px;
+    margin: -30px auto -46px;
     opacity: 0.32;
-    transform: translateY(-4px);
+    transform: translateY(-8px);
   }
 }
 
