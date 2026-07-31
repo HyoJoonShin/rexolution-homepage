@@ -1277,6 +1277,12 @@ nav {
   .video-switcher {
     width: 90%;
   }
+
+  html[lang="en"] .video-switch-button {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
   .form-row {
     flex-direction: column;
   }
