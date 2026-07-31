@@ -13,9 +13,9 @@ const I18N_EN = {
   "home.hero.catalog": "Product Brochure",
 
   "about.title": "About Us",
-  "about.copy.1": "<strong>1. </strong> PCB Assembly OQC (Outgoing Quality Control) still relies on <strong>manual visual inspection by inspectors</strong>. As a result, inspection quality depends heavily on an inspector's proficiency.<br>Rexolution was founded by members from <strong>Seoul National University and KAIST</strong> to solve this problem.",
+  "about.copy.1": "<strong>1. </strong> PCB Assembly OQC (Outgoing Quality Control) still relies on <strong>manual visual inspection by inspectors</strong>. As a result, inspection quality depends heavily on an inspector's proficiency. Rexolution was founded by members from <strong>Seoul National University and KAIST</strong> to solve this problem.",
   "about.copy.2": "<strong>2. </strong> Rexolution's <strong class=\"ai-highlight\">AI vision inspector</strong> automates OQC and <strong>maximizes productivity</strong>. Unlike conventional AOI equipment that requires teaching and debugging for every new product, REX enables <strong>immediate inspection with no teaching required</strong> and provides an inspection solution optimized for <strong>high-mix, low-volume production</strong>.",
-  "about.copy.3": "<strong>3. </strong> We develop everything in-house, from <strong>hardware to AI models</strong>, to deliver high stability and quality.<br>We also operate a dedicated technical support hotline to respond quickly to A/S and on-site issues.",
+  "about.copy.3": "<strong>3. </strong> We develop everything in-house, from <strong>hardware to AI models</strong>, to deliver high stability and quality. We also operate a dedicated technical support hotline to respond quickly to A/S and on-site issues.",
   "about.leader.ceo": "CEO Steve Kim",
   "about.leader.ceo.1": "M.S. in Business and Technology Management, KAIST",
   "about.leader.ceo.2": "Former Head/Director,<br>Strategy Planning,<br>Twinny, an autonomous mobile robot company",
