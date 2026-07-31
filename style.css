@@ -1319,6 +1319,83 @@ nav {
     display: block;
   }
 
+  .old-compare-table,
+  .old-compare-table tbody,
+  .old-compare-table tr,
+  .old-compare-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .old-compare-table {
+    table-layout: auto !important;
+    border-collapse: separate !important;
+  }
+
+  .old-compare-table colgroup,
+  .old-compare-table thead {
+    display: none;
+  }
+
+  .old-compare-table tbody {
+    display: grid;
+    gap: 14px;
+  }
+
+  .old-compare-table tr {
+    padding: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.025);
+  }
+
+  .old-compare-table td {
+    padding: 0 !important;
+    font-size: 14px;
+    line-height: 1.45;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  .old-compare-table td:first-child {
+    margin-bottom: 12px;
+    color: var(--accent);
+    font-size: 16px;
+    font-weight: 800;
+  }
+
+  .old-compare-table td:nth-child(2),
+  .old-compare-table td:nth-child(3) {
+    display: grid;
+    grid-template-columns: minmax(82px, 0.42fr) 1fr;
+    gap: 12px;
+    align-items: start;
+  }
+
+  .old-compare-table td:nth-child(3) {
+    margin-top: 10px;
+  }
+
+  .old-compare-table td:nth-child(2)::before,
+  .old-compare-table td:nth-child(3)::before {
+    color: var(--text-soft);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .old-compare-table td:nth-child(2)::before {
+    content: "기존 장비";
+  }
+
+  .old-compare-table td:nth-child(3)::before {
+    content: "REX";
+  }
+
+  html[lang="en"] .old-compare-table td:nth-child(2)::before {
+    content: "Conventional";
+  }
+
   .product-compare-table {
     font-size: 14px;
   }
