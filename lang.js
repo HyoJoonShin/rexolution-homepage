@@ -27,7 +27,7 @@ const I18N_EN = {
   "about.leader.coo.1": "B.B.A., Seoul National University",
   "about.leader.coo.2": "Certified Public Accountant (KICPA)",
   "about.leader.coo.3": "Former Senior Associate,<br>Samil PwC",
-  "about.history.title": "Company History",
+  "about.history.title": "History",
   "about.history.1": "Selected for Seed TIPS",
   "about.history.2": "Rexolution Inc. established",
   "about.history.3": "Raised seed investment from Antler Korea 🔗",
