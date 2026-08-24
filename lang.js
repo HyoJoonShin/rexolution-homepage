@@ -118,7 +118,7 @@ const I18N_EN = {
   "contact.placeholder.department": "Department",
   "contact.placeholder.position": "Title / Position",
   "contact.placeholder.email": "Email",
-  "contact.placeholder.phone": "Phone number (e.g. +82 10 1234 5678)",
+  "contact.placeholder.phone": "Numbers only, including country code (e.g. 821012345678)",
   "contact.placeholder.message": "Please enter your message",
   "contact.submit": "Send Inquiry",
   "contact.status.sending": "Sending...",

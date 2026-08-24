@@ -77,9 +77,10 @@
               type="tel"
               name="phone"
               id="phone"
-              inputmode="tel"
+              inputmode="numeric"
               autocomplete="tel"
-              placeholder="연락처 (예: +82 10 1234 5678)"
+              maxlength="15"
+              placeholder="국가번호 포함 숫자만 (예: 821012345678)"
               data-i18n-placeholder="contact.placeholder.phone">
 
             <!-- 문의 내용 -->
@@ -101,6 +102,14 @@
 <script src="lang.js"></script>
 
 <script>
+const phoneInput = document.getElementById("phone");
+
+if (phoneInput) {
+  phoneInput.addEventListener("input", function(e) {
+    e.target.value = e.target.value.replace(/\D/g, "").slice(0, 15);
+  });
+}
+
 async function submitContactForm(form) {
   const status = document.getElementById("form-status");
   const submitButton = form.querySelector("button[type=\"submit\"]");
