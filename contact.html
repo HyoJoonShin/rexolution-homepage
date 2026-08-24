@@ -79,9 +79,12 @@
               id="phone"
               inputmode="numeric"
               autocomplete="tel"
-              maxlength="15"
-              placeholder="국가번호 포함 숫자만 (예: 821012345678)"
-              data-i18n-placeholder="contact.placeholder.phone">
+              maxlength="13"
+              placeholder="연락처 000-0000-0000"
+              data-i18n-placeholder="contact.placeholder.phone"
+              pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+              title="연락처 000-0000-0000 형식으로 입력해주세요"
+              data-i18n-title="contact.placeholder.phoneTitle">
 
             <!-- 문의 내용 -->
             <textarea name="message" placeholder="문의 내용을 입력해주세요" data-i18n-placeholder="contact.placeholder.message" required></textarea>
@@ -106,8 +109,22 @@ const phoneInput = document.getElementById("phone");
 
 if (phoneInput) {
   phoneInput.addEventListener("input", function(e) {
-    e.target.value = e.target.value.replace(/\D/g, "").slice(0, 15);
+    e.target.value = formatPhoneNumber(e.target.value);
   });
+}
+
+function formatPhoneNumber(value) {
+  const digits = value.replace(/\D/g, "").slice(0, 11);
+
+  if (digits.length > 7) {
+    return `${digits.slice(0, 3)}-${digits.slice(3, 7)}-${digits.slice(7)}`;
+  }
+
+  if (digits.length > 3) {
+    return `${digits.slice(0, 3)}-${digits.slice(3)}`;
+  }
+
+  return digits;
 }
 
 async function submitContactForm(form) {
