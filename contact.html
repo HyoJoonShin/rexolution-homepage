@@ -104,11 +104,7 @@
 <script src="bg.js"></script>
 <script src="lang.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
 <script>
-emailjs.init("DDwANV5nKbdEEBaYm");
-
 const phoneInput = document.getElementById("phone");
 
 function formatPhoneNumber(value) {
@@ -131,25 +127,39 @@ if (phoneInput) {
   });
 }
 
-document.getElementById("contact-form").addEventListener("submit", function(e) {
+document.getElementById("contact-form").addEventListener("submit", async function(e) {
   e.preventDefault();
 
   const status = document.getElementById("form-status");
+  const submitButton = this.querySelector("button[type=\"submit\"]");
   status.innerText = window.getLangText ? window.getLangText("contact.status.sending", "전송 중...") : "전송 중...";
+  submitButton.disabled = true;
 
-  emailjs.sendForm(
-    "service_2veom7r",
-    "template_zu6cym7",
-    this
-  ).then(() => {
+  try {
+    const formData = new FormData(this);
+    const payload = Object.fromEntries(formData.entries());
+    payload.language = document.documentElement.lang === "en" ? "en" : "ko";
+
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+
+    if (!response.ok) {
+      throw new Error("Contact request failed");
+    }
+
     this.reset();
     status.innerText = "";
     alert(window.getLangText ? window.getLangText("contact.alert.success", "문의가 정상적으로 전송되었습니다.") : "문의가 정상적으로 전송되었습니다.");
-  }).catch((err) => {
+  } catch (err) {
     console.error(err);
     status.innerText = "";
     alert(window.getLangText ? window.getLangText("contact.alert.fail", "전송 실패. 다시 시도해주세요.") : "전송 실패. 다시 시도해주세요.");
-  });
+  } finally {
+    submitButton.disabled = false;
+  }
 });
 </script>
 <footer class="site-footer">
