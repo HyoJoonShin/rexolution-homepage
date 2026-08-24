@@ -127,16 +127,14 @@ if (phoneInput) {
   });
 }
 
-document.getElementById("contact-form").addEventListener("submit", async function(e) {
-  e.preventDefault();
-
+async function submitContactForm(form) {
   const status = document.getElementById("form-status");
-  const submitButton = this.querySelector("button[type=\"submit\"]");
+  const submitButton = form.querySelector("button[type=\"submit\"]");
   status.innerText = window.getLangText ? window.getLangText("contact.status.sending", "전송 중...") : "전송 중...";
   submitButton.disabled = true;
 
   try {
-    const formData = new FormData(this);
+    const formData = new FormData(form);
     const payload = Object.fromEntries(formData.entries());
     payload.language = document.documentElement.lang === "en" ? "en" : "ko";
 
@@ -150,16 +148,34 @@ document.getElementById("contact-form").addEventListener("submit", async functio
       throw new Error("Contact request failed");
     }
 
-    this.reset();
+    form.reset();
     status.innerText = "";
     alert(window.getLangText ? window.getLangText("contact.alert.success", "문의가 정상적으로 전송되었습니다.") : "문의가 정상적으로 전송되었습니다.");
   } catch (err) {
     console.error(err);
     status.innerText = "";
-    alert(window.getLangText ? window.getLangText("contact.alert.fail", "전송 실패. 다시 시도해주세요.") : "전송 실패. 다시 시도해주세요.");
+    const retryMessage = window.getLangText
+      ? window.getLangText(
+          "contact.alert.fail.direct",
+          "문의 전송에 실패했습니다.\n\n확인을 누르면 다시 시도합니다. 취소를 누르면 hkim@rexolution.ai로 직접 메일을 보낼 수 있습니다."
+        )
+      : "문의 전송에 실패했습니다.\n\n확인을 누르면 다시 시도합니다. 취소를 누르면 hkim@rexolution.ai로 직접 메일을 보낼 수 있습니다.";
+
+    if (window.confirm(retryMessage)) {
+      await submitContactForm(form);
+      return;
+    } else {
+      const subject = document.documentElement.lang === "en" ? "Website inquiry" : "홈페이지 문의";
+      window.location.href = `mailto:hkim@rexolution.ai?subject=${encodeURIComponent(subject)}`;
+    }
   } finally {
     submitButton.disabled = false;
   }
+}
+
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  submitContactForm(this);
 });
 </script>
 <footer class="site-footer">

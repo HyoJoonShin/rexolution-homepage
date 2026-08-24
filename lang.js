@@ -125,6 +125,7 @@ const I18N_EN = {
   "contact.status.sending": "Sending...",
   "contact.alert.success": "Your inquiry has been sent successfully.",
   "contact.alert.fail": "Failed to send. Please try again.",
+  "contact.alert.fail.direct": "Your inquiry could not be sent.\n\nSelect OK to try again, or Cancel to compose an email to hkim@rexolution.ai.",
 
   "map.title": "Location",
   "map.address": "<strong>Address</strong> 1201, AI Yangjae Hub, HIBrand, 16 Maeheon-ro, Seocho-gu, Seoul, Republic of Korea",
