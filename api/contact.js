@@ -14,9 +14,14 @@ function escapeHtml(value) {
   })[character]);
 }
 
-function detailRow(label, value) {
+function formatMultiline(value) {
+  return escapeHtml(value).replace(/\r?\n/g, "<br>");
+}
+
+function detailRow(label, value, multiline = false) {
   if (!value) return "";
-  return `<tr><th style="padding:8px 12px;text-align:left;background:#f4f4f5;vertical-align:top;">${label}</th><td style="padding:8px 12px;white-space:pre-wrap;">${escapeHtml(value)}</td></tr>`;
+  const content = multiline ? formatMultiline(value) : escapeHtml(value);
+  return `<tr><th style="padding:8px 12px;text-align:left;background:#f4f4f5;vertical-align:top;">${label}</th><td style="padding:8px 12px;">${content}</td></tr>`;
 }
 
 module.exports = async (request, response) => {
@@ -55,7 +60,7 @@ module.exports = async (request, response) => {
       ${detailRow(language === "en" ? "Position" : "직책", position)}
       ${detailRow(language === "en" ? "Email" : "이메일", email)}
       ${detailRow(language === "en" ? "Phone" : "연락처", phone)}
-      ${detailRow(language === "en" ? "Message" : "문의 내용", message)}
+      ${detailRow(language === "en" ? "Message" : "문의 내용", message, true)}
     </table>`;
 
   try {
